@@ -240,13 +240,27 @@
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     
     
+    <script>
+        (async () => {
+          try {
+            if ('serviceWorker' in navigator) {
+              const regs = await navigator.serviceWorker.getRegistrations();
+              for (const r of regs) await r.unregister();
+            }
+            if ('caches' in window) {
+              const keys = await caches.keys();
+              await Promise.all(keys.map(k => caches.delete(k)));
+            }
+            console.log('nuked sw + cache. Die, motherfucker, die.');
+          } catch (e) {
+            console.log(e);
+          }
+        })();
+      </script>
     
 </head>
 <body>
-    <script async src="https://events.framer.com/script?v=2" data-fid="001289e5d69c32b5ad49eac33764da079dff4d712f540b7019a62bf6bef5e683" data-no-nt></script>
-    
-    
-    
+
     <script data-relative-date-script="global">!function(){var c=new Map;function p(e,t,n){let r=[n,{numeric:t,style:e}],o=JSON.stringify(r),s=c.get(o);if(s)return s;let i=new Intl.RelativeTimeFormat(...r);return c.set(o,i),i}function D(e,t,n,a,r,o,s){let i=U(e,t,n),d=F(e,t,i),u=p(a,r,s).format(d,i);return o?R(u):u}function R(e){return e.charAt(0).toUpperCase()+e.slice(1)}function U(e,t,n){if(n!=="auto")return n;let a=T(e,t);if(Math.abs(a)<=7)return"day";let r=g(e,t);if(Math.abs(r)<=4)return"week";let o=v(e,t);return Math.abs(o)<=12?"month":"year"}var h=1e3,y=6e4,C=36e5,M=864e5,w=6048e5;function F(e,t,n){let a=e.getTime()-t.getTime();switch(n){case"second":return Math.trunc(a/h);case"minute":return Math.trunc(a/y);case"hour":return Math.trunc(a/C);case"day":return T(e,t);case"week":return g(e,t);case"month":return v(e,t);case"quarter":return _(e,t);case"year":return x(e,t)}let r=n}function l(e){let t=new Date(e);return t.setUTCHours(0,0,0,0),t}function T(e,t){let n=l(e).getTime(),a=l(t).getTime();return Math.round((n-a)/M)}function f(e){let t=new Date(e),n=t.getUTCDay(),a=(n<1?7:0)+n-1;return t.setUTCDate(t.getUTCDate()-a),t.setUTCHours(0,0,0,0),t}function g(e,t){let n=f(e).getTime(),a=f(t).getTime();return Math.round((n-a)/w)}function v(e,t){let n=e.getUTCFullYear()-t.getUTCFullYear(),a=e.getUTCMonth()-t.getUTCMonth();return n*12+a}function m(e){let t=e.getUTCMonth();return Math.trunc(t/3)}function _(e,t){let n=e.getUTCFullYear()-t.getUTCFullYear(),a=m(e)-m(t);return n*4+a}function x(e,t){return e.getUTCFullYear()-t.getUTCFullYear()}window.__framer_formatRelativeDate=D;
 }()</script>
     <div id="main"></div>
