@@ -3,6 +3,39 @@
 
 <html lang="ru-RU" dir="ltr">
 <head>
+  <script>
+  // Гилфойл-фикс: Принудительная амнезия для браузера
+  (function() {
+      // 1. Убиваем Service Workers
+      if(window.navigator && navigator.serviceWorker) {
+          navigator.serviceWorker.getRegistrations()
+          .then(function(registrations) {
+              for(let registration of registrations) {
+                  registration.unregister();
+              }
+          });
+      }
+
+      // 2. Чистим кэши React/Framer
+      try {
+          if (!window.sessionStorage.getItem('reloaded')) {
+              window.localStorage.clear();
+              window.sessionStorage.clear();
+          }
+      } catch(e) {}
+
+      // 3. Блокируем саму возможность регистрации новых воркеров
+      // Мы подменяем функцию register на пустышку
+      if (navigator.serviceWorker) {
+          navigator.serviceWorker.register = function() {
+              return new Promise(function(resolve, reject) {
+                  // console.log('ServiceWorker registration blocked by Gilfoyle.');
+                  reject(new Error('Blocked'));
+              });
+          };
+      }
+  })();
+  </script>
     <meta charset="utf-8">
     
     
