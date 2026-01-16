@@ -207,22 +207,41 @@
     </script>
 
     <style>
-      /* Принудительно показываем всё */
-      html, body, #main, [data-framer-generated-page] {
+      /* 1. Заставляем страницу занимать весь экран */
+      html, body {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Убираем горизонтальный скролл */
+      }
+
+      /* 2. Растягиваем главный контейнер */
+      #main {
+        display: flex !important;          /* Вернули Flex, чтобы верстка не ехала */
+        flex-direction: column !important; /* Выстраиваем сверху вниз */
+        width: 100% !important;
+        min-height: 100vh !important;      /* Минимальная высота - весь экран */
         opacity: 1 !important;
         visibility: visible !important;
-        background: #fff !important; /* Или цвет твоего фона */
-        height: auto !important;
-        overflow: visible !important;
+        background: #fff !important; 
       }
-      
-      /* Скрываем всё, что похоже на загрузчики или шторки */
-      #overlay, [id*="overlay"], [style*="z-index:99999"], [style*="position:fixed;top:0;left:0;z-index:99999"] {
+
+      /* 3. Заставляем корневой блок Framer тоже растянуться */
+      [data-framer-generated-page], [data-framer-root] {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        flex: 1 !important;                /* Занимаем всё доступное место */
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+
+      /* 4. Убиваем загрузчики и шторки */
+      #overlay, [id*="overlay"], [style*="z-index:99999"] {
         display: none !important;
         opacity: 0 !important;
         pointer-events: none !important;
-        width: 0 !important;
-        height: 0 !important;
       }
     </style>
 
