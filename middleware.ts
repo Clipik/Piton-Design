@@ -8,6 +8,9 @@ export function middleware(request: NextRequest) {
   if (pathname === "/") {
     return NextResponse.redirect(new URL("/ru", request.url));
   }
+  if (pathname === "") {
+    return NextResponse.redirect(new URL("/ru", request.url));
+  }
 
   return NextResponse.next();
 }
