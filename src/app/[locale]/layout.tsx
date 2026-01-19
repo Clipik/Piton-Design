@@ -16,7 +16,7 @@ const golosText = Golos_Text({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Piton Design",
   description: "Дизайн студия Piton Design",
 };
 
