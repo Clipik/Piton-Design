@@ -14,9 +14,29 @@ interface HeroProps {
 
 export default function Hero({ locale, content }: HeroProps) {
   const [mounted, setMounted] = useState(false);
+  // По умолчанию грузим мобильное видео (экономим трафик)
+  const [videoSrc, setVideoSrc] = useState("/videos/coinshero.webm");
 
   useEffect(() => {
     setMounted(true);
+
+    const handleResize = () => {
+      // Если ширина больше 768px (стандартный брейкпоинт), считаем это монитором
+      const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+      
+      setVideoSrc(
+        isDesktop 
+          ? "/videos/coinsheroformonitors.webm" 
+          : "/videos/coinshero.webm"
+      );
+    };
+
+    // Вызываем сразу при загрузке
+    handleResize();
+
+    // Слушаем изменение размера окна (если юзер решит покрутить планшет)
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -80,17 +100,18 @@ export default function Hero({ locale, content }: HeroProps) {
       </div>
 
       {/* СЛОЙ ВИДЕО */}
-      {/* Добавил flex justify-center, чтобы контейнер центрировал содержимое */}
       <div className="absolute bottom-0 left-0 w-full h-[50%] md:h-full z-10 pointer-events-none flex justify-center items-end">
-        <TransparentVideo
-          src="/videos/coinshero.webm"
-          fallbackSrc="/videos/coinshero.mov"
-          brightness={140} 
-          contrast={130}
-          maskTop={15} 
-          // Добавлен mx-auto для страховки
-          className="w-full h-full object-contain object-bottom mx-auto"
-        />
+        {/* Рендерим видео только после маунта, чтобы избежать конфликтов сервера и клиента */}
+        {mounted && (
+          <TransparentVideo
+            src={videoSrc} // <-- Сюда теперь летит динамический путь
+            fallbackSrc="/videos/coinshero.mov" // <-- Сафари жрет это и не давится
+            brightness={140} 
+            contrast={130}
+            maskTop={15} 
+            className="w-full h-full object-contain object-bottom mx-auto"
+          />
+        )}
       </div>
 
     </section>

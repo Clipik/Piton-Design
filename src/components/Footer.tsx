@@ -3,6 +3,7 @@
 import React from 'react';
 import Typewriter from "./Typewriter";
 import CtaButton from "./CtaButton";
+import Link from "next/link";
 
 interface FooterProps {
   locale: string;
@@ -95,8 +96,20 @@ export default function Footer({ locale, content }: FooterProps) {
             © {currentYear} Piton Design. {content.copy}
           </p>
           <div className="flex gap-6 text-[0.8rem] font-['Golos_Text'] text-[#222222] opacity-40">
-            <a href="/privacy" className="hover:opacity-100 transition-opacity">{content.privacy}</a>
-            <a href="/terms" className="hover:opacity-100 transition-opacity">{content.terms}</a>
+            {/* Ссылки должны включать локаль */}
+            <Link 
+              href={`/${locale}/privacy`} 
+              className="hover:opacity-100 transition-opacity"
+            >
+              {content.privacy}
+            </Link>
+            
+            <Link 
+              href={`/${locale}/terms`} 
+              className="hover:opacity-100 transition-opacity"
+            >
+              {content.terms}
+            </Link>
           </div>
         </div>
       </div>

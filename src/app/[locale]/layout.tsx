@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Unbounded, Golos_Text } from "next/font/google";
 import "@/app/globals.css";
+import { PsychedelicCursor } from "@/components/PsychedelicCursor";
 
 
 const unbounded = Unbounded({
@@ -22,14 +23,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+  params: { locale },
+}: {
   children: React.ReactNode;
-}>) {
+  params: { locale: string };
+}) {
   return (
-    <html lang="en" className="bg-white">
-      <body
+    <html lang={locale}>
+      <body>
         className={`${unbounded.variable} ${golosText.variable} antialiased bg-white`}
-      >
+      <PsychedelicCursor />
+        
         {children}
       </body>
     </html>
