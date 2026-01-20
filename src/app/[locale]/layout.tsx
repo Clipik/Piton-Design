@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Unbounded, Golos_Text } from "next/font/google";
 import "@/app/globals.css";
-import { PsychedelicCursor } from "@/components/PsychedelicCursor";
-
+import { PsychedelicCursor } from "@/components/PsychedelicCursor"; 
 
 const unbounded = Unbounded({
   variable: "--font-unbounded",
@@ -21,19 +20,22 @@ export const metadata: Metadata = {
   description: "Дизайн студия Piton Design",
 };
 
-export default function RootLayout({
-  children,
-  params: { locale },
-}: {
+// Типизация пропсов для Layout
+type Props = {
   children: React.ReactNode;
-  params: { locale: string };
-}) {
+  params: Promise<{ locale: string }>; // <--- ЭТО, БЛЯТЬ, ПРОМИС
+};
+
+// Добавил async
+export default async function RootLayout({ children, params }: Props) {
+  // Достаем locale через await
+  const { locale } = await params;
+
   return (
     <html lang={locale}>
-      <body>
-        className={`${unbounded.variable} ${golosText.variable} antialiased bg-white`}
-      <PsychedelicCursor />
-        
+      {/* Исправил твой ублюдский тег body. ClassName внутри тега! */}
+      <body className={`${unbounded.variable} ${golosText.variable} antialiased bg-white`}>
+        <PsychedelicCursor />
         {children}
       </body>
     </html>
