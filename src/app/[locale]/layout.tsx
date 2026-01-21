@@ -20,20 +20,24 @@ export const metadata: Metadata = {
   description: "Дизайн студия Piton Design",
 };
 
-// Типизация пропсов для Layout
+// Эта херня скажет Нексту создать папки /ru и /en при сборке.
+export function generateStaticParams() {
+  return [
+    { locale: 'ru' },
+    { locale: 'en' },
+  ];
+}
+
 type Props = {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>; // <--- ЭТО, БЛЯТЬ, ПРОМИС
+  params: Promise<{ locale: string }>;
 };
 
-// Добавил async
 export default async function RootLayout({ children, params }: Props) {
-  // Достаем locale через await
   const { locale } = await params;
 
   return (
     <html lang={locale}>
-      {/* Исправил твой ублюдский тег body. ClassName внутри тега! */}
       <body className={`${unbounded.variable} ${golosText.variable} antialiased bg-white`}>
         <PsychedelicCursor />
         {children}

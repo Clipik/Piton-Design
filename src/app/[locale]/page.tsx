@@ -7,7 +7,7 @@ import Pricing from "@/components/Pricing";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import { getProjects } from "@/data/projects";
-import { getContent } from "@/data/content"; // ТЫ ЗАБЫЛ ЭТОТ ИМПОРТ
+import { getContent } from "@/data/content";
 
 interface HomeProps {
   params: Promise<{
@@ -18,10 +18,8 @@ interface HomeProps {
 export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
 
-  // 1. Получаем проекты для текущего языка
   const projects = getProjects(locale);
   
-  // 2. Получаем тексты для всей страницы из твоего нового словаря
   const dict = getContent(locale);
 
   return (
@@ -29,7 +27,6 @@ export default async function Home({ params }: HomeProps) {
       <Navbar locale={locale} />
       
       <main>
-        {/* ПЕРЕДАВАЙ content, ИНАЧЕ ОНО ТАК И БУДЕТ ВЫЛЕТАТЬ */}
         <Hero locale={locale} content={dict.hero} />
 
         <section id="portfolio" className="py-16 bg-white">
