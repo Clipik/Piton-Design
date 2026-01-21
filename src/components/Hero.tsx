@@ -91,14 +91,16 @@ export default function Hero({ locale, content }: HeroProps) {
       </div>
 
       {/* СЛОЙ ВИДЕО / ФОТО */}
-      {/* Убедись, что высота контейнера статична и не прыгает */}
-      <div className="absolute bottom-0 left-0 w-full h-[100dvh] z-10 pointer-events-none flex justify-center items-end">
+      <div className="absolute bottom-0 left-0 w-full h-[100dvh] z-10 pointer-events-none flex justify-center items-end overflow-hidden">
         {mounted && (
           isVideoEnded ? (
             <img 
               src={imageSrc} 
               alt="Coins Hero Static"
-              className="w-full h-full object-cover object-top"
+              // ФИКС ТУТ:
+              // Mobile: object-cover (натягиваем на весь экран), object-bottom (прижимаем к низу), translate-y-[50dvh] (режем низ)
+              // Desktop (md:): object-cover, object-top, translate-y-0 (твои старые настройки)
+              className="w-full h-full transition-transform duration-0 object-cover object-bottom translate-y-[50dvh] md:object-cover md:object-top md:translate-y-0"
               style={{
                 filter: `brightness(${VIDEO_SETTINGS.brightness}%) contrast(${VIDEO_SETTINGS.contrast}%)`,
               }}
@@ -111,7 +113,8 @@ export default function Hero({ locale, content }: HeroProps) {
               brightness={VIDEO_SETTINGS.brightness} 
               contrast={VIDEO_SETTINGS.contrast}
               maskTop={VIDEO_SETTINGS.maskTop}
-              className="w-full h-full object-contain object-bottom mx-auto"
+              // Видео оставляем object-contain, раз оно у тебя работает нормально
+              className="w-full h-full object-contain object-bottom mx-auto transition-transform duration-0 translate-y-[50dvh] md:translate-y-0"
               onEnded={() => setIsVideoEnded(true)}
               loop={false}
             />
