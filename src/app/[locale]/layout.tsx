@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Unbounded, Golos_Text } from "next/font/google";
 import "@/app/globals.css";
 import { PsychedelicCursor } from "@/components/PsychedelicCursor"; 
+import { CursorLoader } from "@/components/CursorLoader"; 
 
 const unbounded = Unbounded({
   variable: "--font-unbounded",
@@ -39,7 +40,8 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body className={`${unbounded.variable} ${golosText.variable} antialiased bg-white`}>
-        <PsychedelicCursor />
+        {/* Вставляем обертку. Она загрузит курсор только в браузере. */}
+        <CursorLoader />
         {children}
       </body>
     </html>

@@ -119,7 +119,7 @@ export const PsychedelicCursor = () => {
       // hidden — скрывает везде по дефолту (мобилки).
       // md:block — показывает, начиная с medium экранов (планшеты/десктопы).
       // Если у тебя Tailwind настроен иначе, чекай свои брейкпоинты, но обычно это работает.
-      className="hidden md:block pointer-events-none fixed inset-0 z-1"
+      className="hidden md:block pointer-events-none fixed inset-0 z-10"
       style={{ width: "100vw", height: "100vh" }}
     />
   );
