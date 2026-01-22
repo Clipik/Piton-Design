@@ -27,7 +27,7 @@ const projectsRu: Project[] = [
     title: "Главная страница IThub College",
     category: ["Сайт"],
     duration: "3 дня",
-    image: "/photos/ithub.webp",
+    image: "/photos/content/ithub/main.webp",
     link: "https://ithub.ru",
     sections: [
       {
@@ -126,7 +126,7 @@ const projectsRu: Project[] = [
     title: "MVP SmartFeed агрегатора контента",
     category: ["Приложение", "Питч-дек"],
     duration: "1 месяц",
-    image: "/photos/smartfeed.webp",
+    image: "/photos/content/smartfeed/main.webp",
     link: "#",
     sections: [
       {
@@ -367,7 +367,7 @@ const projectsEn: Project[] = [
     title: "IThub College Homepage",
     category: ["Website"],
     duration: "3 days",
-    image: "/photos/ithub.webp",
+    image: "/photos/content/ithub/main.webp",
     link: "https://ithub.ru",
     sections: [
       {
@@ -387,7 +387,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ithub/NewHeroLooksLike.jpg",
+          src: "/photos/content/ithub/NewHeroLooksLike_en.jpg",
           alt: "New Hero Design",
         },
       },
@@ -443,7 +443,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ithub/NewHeaderLooksLike.jpg",
+          src: "/photos/content/ithub/NewHeaderLooksLike_en.jpg",
           alt: "New website header",
         },
       },
@@ -466,7 +466,7 @@ const projectsEn: Project[] = [
     title: "SmartFeed Content Aggregator MVP",
     category: ["App", "Pitch Deck"],
     duration: "1 month",
-    image: "/photos/smartfeed.webp",
+    image: "/photos/content/smartfeed/main.webp",
     link: "#",
     sections: [
       {
@@ -486,14 +486,14 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/PhotoWithMainAppBenefits.jpg",
+          src: "/photos/content/smartfeed/PhotoWithMainAppBenefits_en.png",
           alt: "Key app benefits",
         },
       },
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/competitors.jpg",
+          src: "/photos/content/smartfeed/competitors_en.jpg",
           alt: "Competitors analysis",
         },
       },
@@ -507,7 +507,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/FeedProfileAndSearch.jpg",
+          src: "/photos/content/smartfeed/FeedProfileAndSearch_en.jpg",
           alt: "Feed and Search",
         },
       },
@@ -521,7 +521,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/OnboardingAndAnonymousUsing.jpg",
+          src: "/photos/content/smartfeed/OnboardingAndAnonymousUsing_en.png",
           alt: "Onboarding and anonymous use",
         },
       },
@@ -535,7 +535,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/PostsSeparate.jpg",
+          src: "/photos/content/smartfeed/PostsSeparate_en.jpg",
           alt: "Posts separation",
         },
       },
@@ -584,7 +584,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/context.png",
+          src: "/photos/content/ysreda/context_en.png",
           alt: "Project context",
         },
       },
@@ -598,7 +598,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/painandfears.png",
+          src: "/photos/content/ysreda/painandfears_en.png",
           alt: "Pain and fears",
         },
       },
@@ -612,7 +612,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/optimizationsales.png",
+          src: "/photos/content/ysreda/optimizationsales_en.png",
           alt: "Sales tools",
         },
       },
@@ -626,7 +626,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/interfacedesign1.png",
+          src: "/photos/content/ysreda/interfacedesign1_en.png",
           alt: "Interface design without cart",
         },
       },
@@ -639,7 +639,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/interfacedesign2.png",
+          src: "/photos/content/ysreda/interfacedesign2_en.png",
           alt: "Application form",
         },
       },
@@ -652,7 +652,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/validation.png",
+          src: "/photos/content/ysreda/validation_en.png",
           alt: "Trust block and guarantees",
         },
       },
@@ -666,7 +666,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/interfacedesign3.png",
+          src: "/photos/content/ysreda/interfacedesign3_en.png",
           alt: "Mobile version",
         },
       },
@@ -680,7 +680,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/lighthouse.png",
+          src: "/photos/content/ysreda/lighthouse_en.png",
           alt: "Google Lighthouse scores",
         },
       },

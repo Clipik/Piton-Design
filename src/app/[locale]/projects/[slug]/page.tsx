@@ -137,12 +137,12 @@ export default async function ProjectPage({ params }: Props) {
                           ))}
                         </div>
                       </div>
-                      <div className="w-full rounded-[1rem] overflow-hidden bg-[#F7F7FA] shadow-sm aspect-video relative">
+                      <div className="w-full rounded-[1rem] overflow-hidden bg-[#FFFFFF] aspect-video relative">
                          <Image
                             src={project.image}
                             alt={project.title}
                             fill
-                            className="object-cover"
+                            className="object-contain"
                             priority
                           />
                       </div>
@@ -151,7 +151,7 @@ export default async function ProjectPage({ params }: Props) {
 
                 case "image":
                   return (
-                    <div key={index} className="w-full rounded-[1rem] overflow-hidden bg-[#F7F7FA] shadow-sm">
+                    <div key={index} className="w-full rounded-[1rem] overflow-hidden bg-[#F7F7FA]">
                       <Image
                         src={section.content.src}
                         alt={section.content.alt}
@@ -219,7 +219,7 @@ export default async function ProjectPage({ params }: Props) {
                               key={i}
                               href={btn.url}
                               target="_blank"
-                              className="h-[56px] px-8 rounded-full flex items-center justify-center text-[1.1rem] font-['Golos_Text'] font-regular transition-all bg-white text-[#222222] border border-[#E5E7EB] hover:border-[#FF0033] hover:text-[#FF0033] w-full sm:w-auto"
+                              className="whitespace-nowrap h-[56px] px-8 rounded-full flex items-center justify-center text-[1.1rem] font-['Golos_Text'] font-regular transition-all bg-white text-[#222222] border border-[#E5E7EB] hover:border-[#FF0033] hover:text-[#FF0033] w-full sm:w-auto"
                             >
                               {btn.label}
                             </a>
