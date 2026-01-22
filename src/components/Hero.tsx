@@ -1,8 +1,9 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import TransparentVideo from "./TransparentVideo";
 import CtaButton from "./CtaButton";
-import Image from "next/image"; // Используем Next Image для статики!
+// Image из next/image удален, потому что мы используем нативный <picture> для арт-дирекшена (разные картинки для пк и моб)
 
 interface HeroProps {
   locale: string;
@@ -72,17 +73,23 @@ export default function Hero({ locale, content }: HeroProps) {
       {/* СЛОЙ ВИДЕО / ФОТО */}
       <div className="absolute bottom-0 left-0 w-full h-[100dvh] z-10 pointer-events-none flex justify-center items-end overflow-hidden">
           
-          {/* СТАТИЧНАЯ КАРТИНКА (когда видео кончилось) */}
-          {/* Мы скрываем её CSS-ом, пока видео не кончилось. 
-              Это лучше, чем удалять из DOM, меньше скачков. */}
+          {/* 
+             ФИНАЛЬНАЯ КАРТИНКА (HIGH RES)
+             Появляется только когда видео закончилось.
+             fetchPriority="low" — чтобы не мешать загрузке видео в начале.
+          */}
           <div className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${isVideoEnded ? 'opacity-100 z-20' : 'opacity-0 z-0'}`}>
              <picture>
-                {/* Desktop image */}
+                {/* Desktop High Res */}
                 <source media="(min-width: 768px)" srcSet="/photos/coinsheromonitor.webp" />
-                {/* Mobile image */}
+                {/* Mobile High Res */}
                 <img 
                   src="/photos/coinshero.webp" 
-                  alt="Coins Hero Static"
+                  alt="Coins Hero Final"
+                  // @ts-expect-error fetchPriority is not yet fully typed in React
+                  fetchPriority="low"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-bottom translate-y-[50dvh] md:object-cover md:object-top md:translate-y-0"
                   style={{
                     filter: `brightness(${VIDEO_SETTINGS.brightness}%) contrast(${VIDEO_SETTINGS.contrast}%)`,
@@ -91,19 +98,27 @@ export default function Hero({ locale, content }: HeroProps) {
              </picture>
           </div>
 
-          {/* ВИДЕО */}
-          {/* Убрали проверку mounted && !isVideoEnded. Пусть рендерится сразу. */}
-          {/* Скрываем видео, когда оно кончилось, чтобы показать картинку под ним */}
+          {/* 
+             ВИДЕО (HERO ELEMENT)
+             Это LCP. Грузим максимально агрессивно.
+          */}
           <div className={`w-full h-full transition-opacity duration-300 ${isVideoEnded ? 'opacity-0' : 'opacity-100'}`}>
             <TransparentVideo
-              priority={true} // <--- ГРУЗИМ СРАЗУ!
+              // Говорим браузеру: "Это самое важное дерьмо на странице, качай сейчас же"
+              preload="auto"
+              // @ts-expect-error fetchPriority prop
+              fetchPriority="high"
+              
               brightness={VIDEO_SETTINGS.brightness} 
               contrast={VIDEO_SETTINGS.contrast}
               maskTop={VIDEO_SETTINGS.maskTop}
               className="w-full h-full object-contain object-bottom mx-auto transition-transform duration-0 translate-y-[50dvh] md:translate-y-0"
+              
               onEnded={() => setIsVideoEnded(true)}
-              // Добавь постер! Это картинка, которая видна до загрузки видео.
-              poster="/photos/coinshero.webp" 
+              
+              // ВАЖНО: Это должен быть супер-легкий файл (20-30kb), первый кадр видео.
+              // Он закроет дыру, пока видео буферизируется.
+              poster="/photos/coinshero-placeholder.webp" 
             >
               {/* Desktop Video */}
               <source media="(min-width: 768px)" src="/videos/coinsheroformonitors.webm" type="video/webm" />
@@ -118,7 +133,3 @@ export default function Hero({ locale, content }: HeroProps) {
     </section>
   );
 }
-
-
-
-

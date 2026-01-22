@@ -47,7 +47,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ithub/NewHeroLooksLike.jpg",
+          src: "/photos/content/ithub/NewHeroLooksLike.webp",
           alt: "Новый дизайн первого экрана",
         },
       },
@@ -68,7 +68,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ithub/Professions.jpg",
+          src: "/photos/content/ithub/Professions.webp",
           alt: "Визуальный стиль направлений",
         },
       },
@@ -82,14 +82,14 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ithub/BenefitsPricesAndCredit.jpg",
+          src: "/photos/content/ithub/BenefitsPricesAndCredit.webp",
           alt: "Блок стоимости и кредита",
         },
       },
       {
         type: "image",
         content: {
-          src: "/photos/content/ithub/FeedbackForm.jpg",
+          src: "/photos/content/ithub/FeedbackForm.webp",
           alt: "Форма заявки",
         },
       },
@@ -103,7 +103,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ithub/NewHeaderLooksLike.jpg",
+          src: "/photos/content/ithub/NewHeaderLooksLike.webp",
           alt: "Новая шапка сайта",
         },
       },
@@ -146,14 +146,14 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/PhotoWithMainAppBenefits.jpg",
+          src: "/photos/content/smartfeed/PhotoWithMainAppBenefits.webp",
           alt: "Ключевые преимущества приложения",
         },
       },
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/competitors.jpg",
+          src: "/photos/content/smartfeed/competitors.webp",
           alt: "Ключевые преимущества приложения",
         },
       },
@@ -167,7 +167,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/FeedProfileAndSearch.jpg",
+          src: "/photos/content/smartfeed/FeedProfileAndSearch.webp",
           alt: "Лента и поиск",
         },
       },
@@ -181,7 +181,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/OnboardingAndAnonymousUsing.jpg",
+          src: "/photos/content/smartfeed/OnboardingAndAnonymousUsing.webp",
           alt: "Онбординг и анонимность",
         },
       },
@@ -195,7 +195,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/PostsSeparate.jpg",
+          src: "/photos/content/smartfeed/PostsSeparate.webp",
           alt: "Разделение постов в ленте",
         },
       },
@@ -244,7 +244,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/context.png",
+          src: "/photos/content/ysreda/context.webp",
           alt: "Контекст проекта",
         },
       },
@@ -258,7 +258,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/painandfears.png",
+          src: "/photos/content/ysreda/painandfears.webp",
           alt: "Боли и страхи клиентов",
         },
       },
@@ -272,7 +272,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/optimizationsales.png",
+          src: "/photos/content/ysreda/optimizationsales.webp",
           alt: "Инструменты продаж",
         },
       },
@@ -286,7 +286,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/interfacedesign1.png",
+          src: "/photos/content/ysreda/interfacedesign1.webp",
           alt: "Дизайн интерфейса без корзины",
         },
       },
@@ -299,7 +299,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/interfacedesign2.png",
+          src: "/photos/content/ysreda/interfacedesign2.webp",
           alt: "Форма заявки",
         },
       },
@@ -312,7 +312,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/validation.png",
+          src: "/photos/content/ysreda/validation.webp",
           alt: "Блок доверия и гарантий",
         },
       },
@@ -326,7 +326,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/interfacedesign3.png",
+          src: "/photos/content/ysreda/interfacedesign3.webp",
           alt: "Мобильная версия",
         },
       },
@@ -340,7 +340,7 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/lighthouse.png",
+          src: "/photos/content/ysreda/lighthouse.webp",
           alt: "Показатели Google Lighthouse",
         },
       },
@@ -387,7 +387,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ithub/NewHeroLooksLike_en.jpg",
+          src: "/photos/content/ithub/NewHeroLooksLike_en.webp",
           alt: "New Hero Design",
         },
       },
@@ -408,7 +408,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ithub/Professions.jpg",
+          src: "/photos/content/ithub/Professions.webp",
           alt: "Visual style of professions",
         },
       },
@@ -422,14 +422,14 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ithub/BenefitsPricesAndCredit.jpg",
+          src: "/photos/content/ithub/BenefitsPricesAndCredit.webp",
           alt: "Price and credit block",
         },
       },
       {
         type: "image",
         content: {
-          src: "/photos/content/ithub/FeedbackForm.jpg",
+          src: "/photos/content/ithub/FeedbackForm.webp",
           alt: "Application form",
         },
       },
@@ -443,7 +443,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ithub/NewHeaderLooksLike_en.jpg",
+          src: "/photos/content/ithub/NewHeaderLooksLike_en.webp",
           alt: "New website header",
         },
       },
@@ -486,14 +486,14 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/PhotoWithMainAppBenefits_en.png",
+          src: "/photos/content/smartfeed/PhotoWithMainAppBenefits_en.webp",
           alt: "Key app benefits",
         },
       },
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/competitors_en.jpg",
+          src: "/photos/content/smartfeed/competitors_en.webp",
           alt: "Competitors analysis",
         },
       },
@@ -507,7 +507,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/FeedProfileAndSearch_en.jpg",
+          src: "/photos/content/smartfeed/FeedProfileAndSearch_en.webp",
           alt: "Feed and Search",
         },
       },
@@ -521,7 +521,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/OnboardingAndAnonymousUsing_en.png",
+          src: "/photos/content/smartfeed/OnboardingAndAnonymousUsing_en.webp",
           alt: "Onboarding and anonymous use",
         },
       },
@@ -535,7 +535,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/PostsSeparate_en.jpg",
+          src: "/photos/content/smartfeed/PostsSeparate_en.webp",
           alt: "Posts separation",
         },
       },
@@ -584,7 +584,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/context_en.png",
+          src: "/photos/content/ysreda/context_en.webp",
           alt: "Project context",
         },
       },
@@ -598,7 +598,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/painandfears_en.png",
+          src: "/photos/content/ysreda/painandfears_en.webp",
           alt: "Pain and fears",
         },
       },
@@ -612,7 +612,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/optimizationsales_en.png",
+          src: "/photos/content/ysreda/optimizationsales_en.webp",
           alt: "Sales tools",
         },
       },
@@ -626,7 +626,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/interfacedesign1_en.png",
+          src: "/photos/content/ysreda/interfacedesign1_en.webp",
           alt: "Interface design without cart",
         },
       },
@@ -639,7 +639,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/interfacedesign2_en.png",
+          src: "/photos/content/ysreda/interfacedesign2_en.webp",
           alt: "Application form",
         },
       },
@@ -652,7 +652,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/validation_en.png",
+          src: "/photos/content/ysreda/validation_en.webp",
           alt: "Trust block and guarantees",
         },
       },
@@ -666,7 +666,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/interfacedesign3_en.png",
+          src: "/photos/content/ysreda/interfacedesign3_en.webp",
           alt: "Mobile version",
         },
       },
@@ -680,7 +680,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/ysreda/lighthouse_en.png",
+          src: "/photos/content/ysreda/lighthouse_en.webp",
           alt: "Google Lighthouse scores",
         },
       },
