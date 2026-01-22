@@ -86,7 +86,6 @@ export default function Hero({ locale, content }: HeroProps) {
                 <img 
                   src="/photos/coinshero.webp" 
                   alt="Coins Hero Final"
-                  // @ts-expect-error fetchPriority is not yet fully typed in React
                   fetchPriority="low"
                   loading="lazy"
                   decoding="async"

@@ -14,6 +14,7 @@ interface TransparentVideoProps {
   className?: string;  
   loop?: boolean;      
   onEnded?: () => void;
+  preload?: string;
   priority?: boolean; // <--- ВАЖНЫЙ ФЛАГ
 }
 
