@@ -31,8 +31,6 @@ export default function Hero({ locale, content }: HeroProps) {
     <section className="relative w-full h-[100dvh] flex flex-col items-center bg-white overflow-hidden">
 
       {/* СЛОЙ КОНТЕНТА */}
-      {/* Тут mounted нужен только для кнопки с анимацией, если она ломает гидратацию. 
-          Текст рендерим СРАЗУ. */}
       <div className="relative z-20 flex flex-col items-center text-center px-4 pt-[15dvh] md:pt-[20dvh] w-full">
         <h1 className="text-[32px] md:text-[48px] font-semibold text-[#222222] font-['Unbounded'] leading-[1.2] tracking-[-0.01em] max-w-[800px]">
           {content.title}
@@ -46,13 +44,25 @@ export default function Hero({ locale, content }: HeroProps) {
             locale={locale} 
             className="h-[56px] pl-6 pr-2 text-[1.25rem] w-full sm:w-auto justify-center" 
           />
-          
-          {/* Кнопку оставляем как есть, если там сложный CSS JS инъекция */}
+
           <div className="relative inline-block w-full sm:w-auto">
             {mounted && (
-               <style dangerouslySetInnerHTML={{ __html: `...твои стили...`}} />
+              <style dangerouslySetInnerHTML={{ __html: `
+                @keyframes flowing-glow {
+                  0%, 100% { box-shadow: 10px -10px 25px rgba(255, 0, 51, 0.4), -10px 10px 25px rgba(255, 50, 0, 0.3), 0px 0px 30px rgba(255, 0, 51, 0.1); }
+                  50% { box-shadow: -10px -10px 35px rgba(255, 0, 51, 0.5), 10px 10px 35px rgba(255, 50, 0, 0.4), 0px 0px 50px rgba(255, 0, 51, 0.2); }
+                }
+                .glow-button::after {
+                  content: ""; position: absolute; inset: 0; border-radius: 100px; opacity: 0; transition: opacity 0.5s ease-in-out; z-index: -1; animation: flowing-glow 2s infinite ease-in-out;
+                }
+                .glow-button:hover::after { opacity: 1; }
+              `}} />
             )}
-            <a href="#portfolio" className="...">
+            <a
+              href="#portfolio"
+              suppressHydrationWarning={true} 
+              className="glow-button relative z-10 bg-white text-[#FF0033] h-[56px] px-10 rounded-[100px] flex items-center justify-center font-['Golos_Text'] text-[18px] tracking-[0.01em] leading-none border border-transparent shadow-[0px_0.722625px_3.03502px_-1px_rgba(255,0,51,0.14),0px_2.74624px_11.5342px_-2px_rgba(255,0,51,0.13),0px_12px_50.4px_-3px_rgba(255,0,51,0.1)] w-full sm:w-auto"
+            >
               {content.portfolio}
             </a>
           </div>
@@ -108,3 +118,7 @@ export default function Hero({ locale, content }: HeroProps) {
     </section>
   );
 }
+
+
+
+
