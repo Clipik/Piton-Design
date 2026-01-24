@@ -15,7 +15,7 @@ interface AboutProps {
   };
 }
 
-// Выносим видео в отдельный компонент, чтобы изолировать логику ленивой загрузки
+// Выносим видео в отдельный компонент
 const SmartVideo = ({ videoName }: { videoName: string }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -27,18 +27,17 @@ const SmartVideo = ({ videoName }: { videoName: string }) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Как только видео появилось на экране — запускаем
-            // Браузер сам начнет буферизацию в этот момент
+            // Видео во вьюпорте — погнали
             videoElement.play().catch(() => {
-              // Игнорим ошибки автоплея (например, если включен режим экономии трафика)
+              // Если автоплей заблокирован, нам похуй, пусть висит постер
             });
           } else {
-            // Ушло с экрана — ставим на паузу, чтобы не жрать ресурсы CPU/GPU
+            // Ушло с экрана — стоп машина. Нехуй греть GPU.
             videoElement.pause();
           }
         });
       },
-      { threshold: 0.1 } // Сработает, когда покажется 10% видео
+      { threshold: 0.1 }
     );
 
     observer.observe(videoElement);
@@ -51,18 +50,18 @@ const SmartVideo = ({ videoName }: { videoName: string }) => {
   return (
     <video
       ref={videoRef}
-      // УБИРАЕМ autoPlay из пропсов. Мы запускаем его руками через JS.
       loop
       muted
       playsInline
-      // САМОЕ ВАЖНОЕ: preload="none". Не качай ни байта, пока JS не скажет.
       preload="none"
+      // ВОТ ТВОЁ "ФОТО" ДЛЯ АЙФОНОВ.
+      // Если видео не загрузится или формат не поддерживается, юзер увидит этот webp.
       poster={`/videos/${videoName}.webp`}
       className="w-full h-full object-contain object-center"
       style={{ filter: 'brightness(120%) contrast(115%)' }}
     >
+      {/* Только WebM. Это стандарт. К черту .mov */}
       <source src={`/videos/${videoName}.webm`} type="video/webm" />
-      <source src={`/videos/${videoName}.mov`} type="video/quicktime" />
     </video>
   );
 };
@@ -91,7 +90,6 @@ export default function About({ locale, content }: AboutProps) {
           >
             
             <div className="absolute top-0 right-0 w-[60%] h-[60%] md:w-[80%] md:h-[80%] z-20 -translate-y-3 translate-x-0 sm:translate-x-4 scale-115 md:translate-x-8 md:scale-100 pointer-events-none">
-              {/* Вставляем наш умный компонент */}
               <SmartVideo videoName={item.videoName} />
             </div>
 

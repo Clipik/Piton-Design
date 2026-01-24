@@ -75,14 +75,10 @@ export default function Hero({ locale, content }: HeroProps) {
           
           {/* 
              ФИНАЛЬНАЯ КАРТИНКА (HIGH RES)
-             Появляется только когда видео закончилось.
-             fetchPriority="low" — чтобы не мешать загрузке видео в начале.
           */}
           <div className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${isVideoEnded ? 'opacity-100 z-20' : 'opacity-0 z-0'}`}>
              <picture>
-                {/* Desktop High Res */}
                 <source media="(min-width: 768px)" srcSet="/photos/coinsheromonitor.webp" />
-                {/* Mobile High Res */}
                 <img 
                   src="/photos/coinshero.webp" 
                   alt="Coins Hero Final"
@@ -99,11 +95,9 @@ export default function Hero({ locale, content }: HeroProps) {
 
           {/* 
              ВИДЕО (HERO ELEMENT)
-             Это LCP. Грузим максимально агрессивно.
           */}
           <div className={`w-full h-full transition-opacity duration-300 ${isVideoEnded ? 'opacity-0' : 'opacity-100'}`}>
             <TransparentVideo
-              // Говорим браузеру: "Это самое важное дерьмо на странице, качай сейчас же"
               preload="auto"
               // @ts-expect-error fetchPriority prop
               fetchPriority="high"
@@ -115,16 +109,16 @@ export default function Hero({ locale, content }: HeroProps) {
               
               onEnded={() => setIsVideoEnded(true)}
               
-              // ВАЖНО: Это должен быть супер-легкий файл (20-30kb), первый кадр видео.
-              // Он закроет дыру, пока видео буферизируется.
+              // ЭТО ТВОЁ ФОТО ДЛЯ АЙФОНОВ, ЕСЛИ ВИДЕО НЕ ПОЕДЕТ
               poster="/photos/coinshero-placeholder.webp" 
             >
               {/* Desktop Video */}
               <source media="(min-width: 768px)" src="/videos/coinsheroformonitors.webm" type="video/webm" />
               {/* Mobile Video */}
               <source src="/videos/coinshero.webm" type="video/webm" />
-              {/* Fallback Mobile MOV */}
-              <source src="/videos/coinshero.mov" type="video/quicktime" />
+              
+              {/* Я удалил .mov. Теперь это не раздутое говно. 
+                  Если Safari не осилит WebM, он покажет poster. */}
             </TransparentVideo>
           </div>
 
