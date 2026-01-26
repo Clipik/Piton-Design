@@ -53,19 +53,35 @@ const SmartVideo = ({ videoName }: { videoName: string }) => {
       loop
       muted
       playsInline
-      preload="none"
-      // ВОТ ТВОЁ "ФОТО" ДЛЯ АЙФОНОВ.
-      // Если видео не загрузится или формат не поддерживается, юзер увидит этот webp.
+      preload="none" 
       poster={`/videos/${videoName}.webp`}
       className="w-full h-full object-contain object-center"
       style={{ filter: 'brightness(120%) contrast(115%)' }}
     >
-      {/* Только WebM. Это стандарт. К черту .mov */}
-      <source src={`/videos/${videoName}.webm`} type="video/webm" />
+      {/* 
+         SAFARI FIX:
+         Сначала скармливаем ему HEVC (.mov). 
+         Обязательно codecs="hvc1", иначе он может затупить.
+         Это единственный способ получить прозрачность на iOS/macOS.
+      */}
+      <source 
+        src={`/videos/${videoName}.mov`} 
+        type='video/mp4; codecs="hvc1"' 
+      />
+
+      {/* 
+         STANDARD:
+         WebM для всех нормальных браузеров.
+      */}
+      <source 
+        src={`/videos/${videoName}.webm`} 
+        type="video/webm" 
+      />
     </video>
   );
 };
 
+// Твой компонент About без изменений, просто чтобы контекст сохранился
 export default function About({ locale, content }: AboutProps) {
   
   const fixOrphans = (text: string) => {
@@ -90,6 +106,7 @@ export default function About({ locale, content }: AboutProps) {
           >
             
             <div className="absolute top-0 right-0 w-[60%] h-[60%] md:w-[80%] md:h-[80%] z-20 -translate-y-3 translate-x-0 sm:translate-x-4 scale-115 md:translate-x-8 md:scale-100 pointer-events-none">
+              {/* Тут передается только имя, расширения подставляются внутри */}
               <SmartVideo videoName={item.videoName} />
             </div>
 

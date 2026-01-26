@@ -109,16 +109,32 @@ export default function Hero({ locale, content }: HeroProps) {
               
               onEnded={() => setIsVideoEnded(true)}
               
-              // ЭТО ТВОЁ ФОТО ДЛЯ АЙФОНОВ, ЕСЛИ ВИДЕО НЕ ПОЕДЕТ
+              // Фолбэк постер
               poster="/photos/coinshero-placeholder.webp" 
             >
-              {/* Desktop Video */}
-              <source media="(min-width: 768px)" src="/videos/coinsheroformonitors.webm" type="video/webm" />
-              {/* Mobile Video */}
-              <source src="/videos/coinshero.webm" type="video/webm" />
+              {/* 
+                  ВАЖНО: MOV (HEVC) ДОЛЖЕН БЫТЬ ПЕРВЫМ! 
+                  Safari видит его, понимает что это hvc1 и играет с прозрачностью.
+                  Если первым будет WebM, Safari попытается его сыграть и высрет черный фон.
+              */}
+              <source 
+                  src="/videos/coinshero.mov" 
+                  type='video/mp4; codecs="hvc1"' 
+              />
+
+              {/* Desktop Video (WebM) - Chrome/Firefox/Edge */}
+              <source 
+                  media="(min-width: 768px)" 
+                  src="/videos/coinsheroformonitors.webm" 
+                  type="video/webm" 
+              />
               
-              {/* Я удалил .mov. Теперь это не раздутое говно. 
-                  Если Safari не осилит WebM, он покажет poster. */}
+              {/* Mobile Video (WebM) - Android/Chrome Mobile */}
+              <source 
+                  src="/videos/coinshero.webm" 
+                  type="video/webm" 
+              />
+              
             </TransparentVideo>
           </div>
 
