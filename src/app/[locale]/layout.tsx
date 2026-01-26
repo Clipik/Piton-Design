@@ -41,6 +41,19 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
+      {/* 
+        ДОБАВЛЯЕМ HEAD ВРУЧНУЮ ДЛЯ PRELOAD 
+        Это скажет браузеру: "Бросай всё и качай эту картинку, она нужна для LCP прямо щас".
+      */}
+      <head>
+        <link 
+          rel="preload" 
+          as="image" 
+          href="/photos/coinshero-placeholder.webp" 
+          // @ts-expect-error fetchPriority is strictly standard but React types might bitch about it
+          fetchPriority="high"
+        />
+      </head>
       <body className={`${unbounded.variable} ${golosText.variable} antialiased bg-white`}>
         <CursorLoader />
         {children}
