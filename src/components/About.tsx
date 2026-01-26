@@ -54,7 +54,7 @@ const SmartVideo = ({ videoName }: { videoName: string }) => {
       muted
       playsInline
       preload="none" 
-      poster={`/videos/${videoName}.webp`}
+      poster={`/photos/${videoName}.webp`}
       className="w-full h-full object-contain object-center"
       style={{ filter: 'brightness(120%) contrast(115%)' }}
     >
