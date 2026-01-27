@@ -153,8 +153,8 @@ const projectsRu: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/competitors.webp",
-          alt: "Ключевые преимущества приложения",
+          src: "/photos/content/smartfeed/Competitors.webp",
+          alt: "Конкуренты",
         },
       },
       {
@@ -493,7 +493,7 @@ const projectsEn: Project[] = [
       {
         type: "image",
         content: {
-          src: "/photos/content/smartfeed/competitors_en.webp",
+          src: "/photos/content/smartfeed/Competitors_en.webp",
           alt: "Competitors analysis",
         },
       },
