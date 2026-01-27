@@ -50,7 +50,6 @@ export default async function RootLayout({ children, params }: Props) {
           rel="preload" 
           as="image" 
           href="/photos/coinshero-placeholder.webp" 
-          // @ts-expect-error fetchPriority is strictly standard but React types might bitch about it
           fetchPriority="high"
         />
       </head>
