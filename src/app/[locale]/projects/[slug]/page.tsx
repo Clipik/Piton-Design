@@ -155,6 +155,7 @@ export default async function ProjectPage({ params }: Props) {
                       <Image
                         src={section.content.src}
                         alt={section.content.alt}
+                        loading={section.content.loading || "lazy"}
                         width={1200}
                         height={800}
                         className="w-full h-auto object-cover"
