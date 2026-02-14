@@ -112,21 +112,36 @@ export default function Hero({ locale, content }: HeroProps) {
               // ВОТ ТУТ ГЛАВНОЕ: постер загрузится моментально благодаря layout.tsx
               poster="/photos/coinshero-placeholder.webp" 
             >
-              <source 
-                  src="/videos/coinshero.mov" 
-                  type='video/mp4; codecs="hvc1"' 
-              />
-              <source 
-                  media="(min-width: 768px)" 
-                  src="/videos/coinsheroformonitors.webm" 
-                  type="video/webm" 
-              />
-              <source 
-                  src="/videos/coinshero.webm" 
-                  type="video/webm" 
-              />
-            </TransparentVideo>
-          </div>
+              {/* 
+               1. ДЕСКТОП (Приоритет №1)
+               Сначала проверяем: "Ты широкий?" Если да — бери десктопное видео и вали отсюда.
+            */}
+            <source 
+                media="(min-width: 768px)" 
+                src="/videos/coinshero_desktop.mp4" 
+                type="video/mp4" 
+            />
+
+            {/* 
+               2. МОБИЛКА (HEVC / H.265) - ОПЦИОНАЛЬНО
+               Если ты реально закодировал отдельный файл в H.265 (hvc1) для айфонов.
+               Если нет — удали этот блок, не путай браузер.
+               Если файл тот же самый, что и ниже (H.264), то атрибут codecs="hvc1" сломает воспроизведение.
+            */}
+            {/* <source src="/videos/coinshero_mobile_hevc.mp4" type='video/mp4; codecs="hvc1"' /> */}
+
+            {/* 
+               3. МОБИЛКА (Фоллбек для всех остальных)
+               Сюда провалится всё, что меньше 768px.
+               Это обычный H.264, который работает везде.
+            */}
+            <source 
+                src="/videos/coinshero_mobile.mp4" 
+                type="video/mp4" 
+            />
+
+          </TransparentVideo>
+        </div>
 
       </div>
     </section>
