@@ -55,7 +55,7 @@ export const PsychedelicCursor = () => {
       const color = `hsl(${hue}, 100%, 50%)`;
 
       // Добавляем новую точку (интерполяция для плавности)
-      // Мы не просто телепортируем точку, а "тянем" хвост к мыши
+      // Мы не просто телепортируем точку, а тянем хвост к мыши
       const target = mouseRef.current;
       const prevHead = pointsRef.current[0];
       
@@ -118,7 +118,6 @@ export const PsychedelicCursor = () => {
       // Добавил hidden md:block.
       // hidden — скрывает везде по дефолту (мобилки).
       // md:block — показывает, начиная с medium экранов (планшеты/десктопы).
-      // Если у тебя Tailwind настроен иначе, чекай свои брейкпоинты, но обычно это работает.
       className="hidden md:block pointer-events-none fixed inset-0 z-10"
       style={{ width: "100vw", height: "100vh" }}
     />

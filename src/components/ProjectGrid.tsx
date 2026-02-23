@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Project } from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
-import CtaButton from "./CtaButton"; // Убедись, что файл лежит рядом в папке components
+import CtaButton from "./CtaButton";
 
 interface ProjectGridProps {
   locale: string;
@@ -13,7 +13,6 @@ interface ProjectGridProps {
 export default function ProjectGrid({ locale, projects }: ProjectGridProps) {
   
   // 1. ОПРЕДЕЛЯЕМ КАТЕГОРИИ В ЗАВИСИМОСТИ ОТ ЯЗЫКА
-  // Важно: Эти слова должны ТОЧНО совпадать с тем, что написано в data/projects.ts
   const categoriesList = locale === 'ru' 
     ? ["Все", "Сайт", "Приложение", "Питч-дек"]
     : ["All", "Website", "App", "Pitch Deck"];
@@ -49,7 +48,6 @@ export default function ProjectGrid({ locale, projects }: ProjectGridProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {filteredProjects.map((project: Project) => (
           <Link
-            // ВОТ ТВОЙ ПУТЬ. ОН БЫЛ ПРАВИЛЬНЫМ, Я ПРОСТО УБРАЛ ЛИШНИЕ СКОБКИ
             href={`/${locale}/projects/${project.slug}`}
             key={project.id}
             className="group relative flex flex-col rounded-[1rem] overflow-hidden bg-[#F8F9FB] transition-all duration-500 hover:shadow-2xl hover:shadow-[#222222]/10 cursor-pointer"
@@ -105,8 +103,6 @@ export default function ProjectGrid({ locale, projects }: ProjectGridProps) {
       {/* FOOTER BUTTON */}
       <CtaButton 
         locale={locale} 
-        // Если ты обновил CtaButton.tsx как я говорил в прошлом ответе, 
-        // то w-full здесь сработает корректно и растянет кнопку.
         className="w-full h-[64px] mt-6 text-[1.25rem] px-4"
       />
     </div>

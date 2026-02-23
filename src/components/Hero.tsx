@@ -114,21 +114,12 @@ export default function Hero({ locale, content }: HeroProps) {
             >
               {/* 
                1. ДЕСКТОП (Приоритет №1)
-               Сначала проверяем: "Ты широкий?" Если да — бери десктопное видео и вали отсюда.
             */}
             <source 
                 media="(min-width: 768px)" 
                 src="/videos/coinshero_desktop.mp4" 
                 type="video/mp4" 
             />
-
-            {/* 
-               2. МОБИЛКА (HEVC / H.265) - ОПЦИОНАЛЬНО
-               Если ты реально закодировал отдельный файл в H.265 (hvc1) для айфонов.
-               Если нет — удали этот блок, не путай браузер.
-               Если файл тот же самый, что и ниже (H.264), то атрибут codecs="hvc1" сломает воспроизведение.
-            */}
-            {/* <source src="/videos/coinshero_mobile_hevc.mp4" type='video/mp4; codecs="hvc1"' /> */}
 
             {/* 
                3. МОБИЛКА (Фоллбек для всех остальных)

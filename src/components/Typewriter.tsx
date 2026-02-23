@@ -3,18 +3,18 @@
 import { useEffect, useState } from "react";
 
 interface TypewriterProps {
-  phrases: string[];    // Массив строк, которые будут чередоваться. Не забудь их передать, иначе всё сдохнет.
-  speed?: number;       // Скорость печати (мс на один символ). Меньше = быстрее.
-  deleteSpeed?: number; // Скорость удаления текста. Обычно ставят быстрее, чем печать.
-  pauseTime?: number;   // Пауза (мс), когда фраза напечатана полностью, перед тем как начать стирать.
-  className?: string;   // Стили для контейнера.
+  phrases: string[];    // Массив строк, которые будут чередоваться
+  speed?: number;       // Скорость печати (мс на один символ). Меньше = быстрее
+  deleteSpeed?: number; // Скорость удаления текста. Обычно ставят быстрее, чем печать
+  pauseTime?: number;   // Пауза (мс), когда фраза напечатана полностью, перед тем как начать стирать
+  className?: string;   // Стили для контейнера
 }
 
 export default function Typewriter({
   phrases,
   speed = 100,      // Дефолт: 100мс
   deleteSpeed = 50, // Дефолт: 50мс
-  pauseTime = 2000, // Дефолт: 2 секунды любуемся текстом
+  pauseTime = 2000, // Дефолт: 2 сек любуемся текстом
   className = "",
 }: TypewriterProps) {
   const [displayedText, setDisplayedText] = useState("");
@@ -23,7 +23,6 @@ export default function Typewriter({
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    // Если ты не передал фразы, мне нечего делать. Ухожу.
     if (!phrases || phrases.length === 0) return;
 
     const currentPhrase = phrases[currentPhraseIndex];
@@ -67,21 +66,9 @@ export default function Typewriter({
   }, [currentCharIndex, currentPhraseIndex, isDeleting, phrases, speed, deleteSpeed, pauseTime]);
 
   return (
-    /* 
-       КОНТЕЙНЕР ПЕЧАТАЛКИ:
-       - w-[160px]: Твой священный лимит ширины. 
-         Если текст не влезет — он перенесется и разнесет тебе всю верстку навбара. 
-         Если фраза короче — справа будет пустота. Крути это число под самую длинную фразу.
-       - bg-white: Фон.
-    */
     <div className={`w-[160px] ${className}`}>
       <span className="font-text font-medium text-base text-[#222222]">
         {displayedText}
-        {/* 
-           КАРЕТКА: 
-           - animate-pulse: заставляет палочку мигать.
-           - Если хочешь сменить символ — меняй "|" на что угодно.
-        */}
         <span className="animate-pulse">|</span>
       </span>
     </div>

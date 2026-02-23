@@ -15,7 +15,7 @@ interface TransparentVideoProps {
   loop?: boolean;      
   onEnded?: () => void;
   preload?: string;
-  priority?: boolean; // <--- ВАЖНЫЙ ФЛАГ
+  priority?: boolean;
 }
 
 export default function TransparentVideo({
@@ -29,7 +29,7 @@ export default function TransparentVideo({
   className = "",
   loop = false,
   onEnded, 
-  priority = false, // По дефолту false
+  priority = false,
 }: TransparentVideoProps) {
   const containerRef = useRef(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -44,7 +44,6 @@ export default function TransparentVideo({
     if (shouldRender && videoRef.current && !hasPlayed) {
       // Пытаемся запустить. Если priority, автоплей сработает быстрее.
       videoRef.current.play().catch((err) => {
-        // Автоплей может быть блокнут, если нет muted. У тебя есть muted.
       });
       setHasPlayed(true);
     }

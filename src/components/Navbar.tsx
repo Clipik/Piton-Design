@@ -32,14 +32,14 @@ export default function Navbar({ locale }: NavbarProps) {
 
     window.addEventListener('scroll', controlNavbar);
 
-    // А это чтобы не засрать память, когда компонент сдохнет. Учись.
+    // А это чтобы не засрать память, когда компонент сдохнет
     return () => {
       window.removeEventListener('scroll', controlNavbar);
     };
   }, [lastScrollY, isOpen]); // Перезапускаем эффект, если изменился скролл или состояние меню
 
   return (
-    // Я ИЗМЕНИЛ ЭТУ СТРОКУ. Добавил transition и динамический класс
+    // Добавил transition и динамический класс
     <nav className={`fixed top-0 w-full z-50 bg-white border-b border-[#F0F0F0] transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="max-w-[1200px] mx-auto px-4 py-3 flex items-center justify-between">
         
@@ -159,7 +159,6 @@ export default function Navbar({ locale }: NavbarProps) {
       </div>
 
       {/* MOBILE MENU DROPDOWN */}
-      {/* Ничего не менял, но теперь он будет выезжать из-под уехавшего хедера */}
       {isOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full bg-white border-t border-b border-[#F0F0F0] shadow-xl flex flex-col p-6 animate-in slide-in-from-top-2 duration-200">
            {/* Mobile Navigation Links */}

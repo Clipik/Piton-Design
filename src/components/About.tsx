@@ -81,7 +81,7 @@ const SmartVideo = ({ videoName }: { videoName: string }) => {
   );
 };
 
-// Твой компонент About без изменений, просто чтобы контекст сохранился
+// компонент About без изменений, просто чтобы контекст сохранился
 export default function About({ locale, content }: AboutProps) {
   
   const fixOrphans = (text: string) => {
