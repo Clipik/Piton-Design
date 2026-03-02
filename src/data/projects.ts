@@ -374,6 +374,93 @@ const projectsRu: Project[] = [
         },
       },
     ],
+  {
+    id: 4,
+    slug: "powerm",
+    title: "Карьерный портал Силовых Машин",
+    category: ["Сайт", "HR-бренд", "UX/UI"],
+    duration: "10 дней",
+    image: "/photos/content/powerm/laptopmockup.webp",
+    link: "https://career.power-m.ru",
+    sections:[
+      {
+        type: "hero",
+        content: {
+          title: "Карьерный портал Силовых Машин",
+          tags:["UX/UI", "HR Tech", "Конверсия", "Mobile First"],
+        },
+      },
+      {
+        type: "text",
+        content: {
+          title: "Кадры решают всё. Плохой UX решает, что кадров не будет",
+          text: "Силовые машины — промышленный гигант, которому нужно нанимать 2000 человек в год. Сварщики, токари, инженеры. Проблема в том, что их старый сайт застрял в 2019 году. Молодёжь закрывала за 3 сек, а соискатели не находили нужную кнопку.\n\nПередо мной стояла задача сделать работающую HR-воронку, не сломав при этом строгий корпоративный брендбук и архаичный движок 1С-Битрикс."
+        },
+      },
+      {
+        type: "image",
+        content: {
+          src: "/photos/content/powerm/context.webp",
+          loading: "lazy",
+          alt: "Контекст и проблематика проекта",
+        },
+      },
+      {
+        type: "text",
+        content: {
+          title: "Мобильная верстка под ЦА",
+          text: "Аналитика показала, что 70% трафика — это мобильные телефоны. Сварщик ищет работу в метро на старом телефоне и не сидит с макбуком в коворкинге. Поэтому мобильная версия стала абсолютным приоритетом.\n\nКрупные тач-зоны от 44px, нет ховеров, фильтры на первом экране. Cократили путь до отклика на вакансию до 2 кликов. Сайт должен работать как приложение доставки: прямо, быстро и предсказуемо.",
+        },
+      },
+      {
+        type: "image",
+        content: {
+          src: "/photos/content/powerm/mobileapatationHOW.webp",
+          loading: "lazy",
+          alt: "Принципы мобильной адаптации",
+        },
+      },
+      {
+        type: "text",
+        content: {
+          title: "Продажа будущего",
+          text: "Кандидат должен за секунды понять: здесь платят, здесь безопасно, здесь нет пережитка прошлого. В карточках профессий заменили корпоративный язык и добавили описания с фактами, чтобы новичок сразу понял, что ему предстоит делать.",
+        },
+      },
+      {
+        type: "image",
+        content: {
+          src: "/photos/content/powerm/heroblockofmainpage.webp",
+          loading: "lazy",
+          alt: "Новый главный экран портала",
+        },
+      },
+      {
+        type: "text",
+        content: {
+          title: "1С-Битрикс как данность",
+          text: "Дизайн, который нельзя сверстать — фантазия аутиста. Сайт будет натягиваться на компоненты Битрикса сторонними подрядчиками. \n\nПоэтому архитектура построена на масштабируемой модульной сетке. Контент-менеджеры добавляют статьи любой длины без риска, что вёрстка сломается. СТА интегрированы в каждую статью, любая страница становится точкой входа в воронку найма.",
+        },
+      },
+      {
+        type: "image",
+        content: {
+          src: "/photos/content/powerm/articlepagetop.webp",
+          loading: "lazy",
+          alt: "Масштабируемая модульная сетка для Битрикс",
+        },
+      },
+      {
+        type: "summary",
+        content: {
+          title: "Итог",
+          text: "1-е место в федеральном соревновании. Концепт утверждён топ-менеджментом. Заказчик получил конверсионный интерфейс, уважающий время кандидата и решающий конкретную боль бизнеса — бесперебойный найм людей на заводы.",
+          buttons:[
+            { label: "Обсудить проект", url: "https://t.me/liverans", primary: true },
+          ],
+        },
+      },
+    ],
   },
 ];
 
@@ -727,6 +814,93 @@ const projectsEn: Project[] = [
           text: "The client received a stable flow of targeted leads, and we demonstrated that a systematic approach and logic in design defeat subjective 'like or dislike'.",
           buttons: [
             { label: "View Website", url: "http://ysreda.tilda.ws/", primary: false },
+            { label: "Discuss Project", url: "https://t.me/liverans", primary: true },
+          ],
+        },
+      },
+    ],
+  {
+    id: 4,
+    slug: "powerm",
+    title: "Power Machines Career Portal",
+    category:["Website", "HR Tech", "UX/UI"],
+    duration: "14 days",
+    image: "/photos/content/powerm/laptopmockup.webp",
+    link: "https://career.power-m.ru",
+    sections:[
+      {
+        type: "hero",
+        content: {
+          title: "Power Machines Career Portal",
+          tags:["UX/UI", "HR Tech", "Conversion", "Mobile First"],
+        },
+      },
+      {
+        type: "text",
+        content: {
+          title: "Personnel is everything. Shitty UX means no personnel.",
+          text: "«Power Machines» is an industrial giant that needs to hire 2,000 people a year. Welders, turners, engineers. The problem? Their old site was stuck in 2019 and looked like a dusty bulletin board. Zoomers closed it in 3 seconds, and blue-collar workers couldn't find the 'Apply' button.\n\nMy task was to turn this legacy crap into a working HR funnel without breaking their strict brand book or the archaic 1C-Bitrix engine. No 'design for the sake of design'. Just hardcore conversion."
+        },
+      },
+      {
+        type: "image",
+        content: {
+          src: "/photos/content/powerm/context.webp",
+          loading: "lazy",
+          alt: "Project context and problems",
+        },
+      },
+      {
+        type: "text",
+        content: {
+          title: "Mobile First for Blue-Collar Workers",
+          text: "Analytics showed that 70% of traffic comes from mobile devices. A welder looks for a job in the subway on an old Android, not sitting with a MacBook in a coworking space. Therefore, the mobile version became the absolute priority.\n\nMassive touch zones (44px+), zero hover effects (they don't exist on touchscreens), and filters right on the first screen. We reduced the path to a job application down to 2 clicks. The site should work like an Uber app: stupidly simple, fast, and predictable.",
+        },
+      },
+      {
+        type: "image",
+        content: {
+          src: "/photos/content/powerm/mobileapatationHOW.webp",
+          loading: "lazy",
+          alt: "Mobile adaptation principles",
+        },
+      },
+      {
+        type: "text",
+        content: {
+          title: "Selling the Future Instead of Text Blocks",
+          text: "Instead of abstract promises, we implemented visual proof blocks. Only real photos of clean workshops and real people in hard hats—no plastic stock smiles or fucked-up AI generations.\n\nThe candidate must understand in seconds: they pay well here, it's safe, and it's not a Soviet remnant. In the job cards, we removed corporate jargon and added clear, fact-based descriptions so a newbie instantly understands what they will be doing.",
+        },
+      },
+      {
+        type: "image",
+        content: {
+          src: "/photos/content/powerm/heroblockofmainpage.webp",
+          loading: "lazy",
+          alt: "New hero section of the portal",
+        },
+      },
+      {
+        type: "text",
+        content: {
+          title: "1C-Bitrix as a Given",
+          text: "A design that can't be coded is an autistic fantasy. The site will be integrated into Bitrix components by the client's third-party developers.\n\nTherefore, the entire architecture is built on a strict, scalable modular grid. It allows content managers to add articles of any length without the risk of the layout going to shit. CTAs are integrated into every article, making absolutely any page an entry point into the hiring funnel.",
+        },
+      },
+      {
+        type: "image",
+        content: {
+          src: "/photos/content/powerm/articlepagetop.webp",
+          loading: "lazy",
+          alt: "Scalable modular grid for Bitrix",
+        },
+      },
+      {
+        type: "summary",
+        content: {
+          title: "Summary",
+          text: "1st place in the federal 'Young Design' competition. The concept was approved by top management. The client received a modern, predictable, and high-conversion interface that respects the candidate's time and solves a specific business pain: uninterrupted hiring for their factories.",
+          buttons:[
             { label: "Discuss Project", url: "https://t.me/liverans", primary: true },
           ],
         },
