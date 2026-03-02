@@ -13,6 +13,7 @@ export interface Project {
   slug: string;
   title: string;
   category: string[];
+  badge?: string;
   duration: string;
   image: string;
   link?: string;
@@ -21,6 +22,318 @@ export interface Project {
 
 // --- RUSSIAN DATA ---
 const projectsRu: Project[] = [
+  {
+    id: 4,
+    slug: "powerm",
+    title: "Карьерный портал Силовых Машин",
+    category: ["Сайт", "HR-бренд", "UX/UI"],
+    badge: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 141.7 141.7" xml:space="preserve"><style>.st0{fill:#FF0033;}.st1{fill:#FFFFFF;}</style><polygon class="st0" points="70.9,0 78.4,13.8 89.2,2.4 92.9,17.7 106.3,9.5 105.9,25.2 121,20.8 116.5,35.8 132.2,35.4 124.1,48.8 139.3,52.5 128,63.4 141.7,70.9 128,78.4 139.3,89.2 124.1,92.9 132.2,106.3 116.5,105.9 121,121 105.9,116.5 106.3,132.2 92.9,124.1 89.2,139.3 78.4,128 70.9,141.7 63.4,128 52.5,139.3 48.8,124.1 35.4,132.2 35.8,116.5 20.8,121 25.2,105.9 9.5,106.3 17.7,92.9 2.4,89.2 13.8,78.4 0,70.9 13.8,63.4 2.4,52.5 17.7,48.8 9.5,35.4 25.2,35.8 20.8,20.8 35.8,25.2 35.4,9.5 48.8,17.7 52.5,2.4 63.4,13.8"/><g><path class="st1" d="M85,100H56.7v-5.9h10.5v-39H56.7v-5.3c4,0,6.9-0.6,8.8-1.7c1.9-1.1,2.9-3.3,3.2-6.4h6.1v52.4H85V100z"/></g></svg>`,
+    duration: "10 дней",
+    image: "/photos/content/powerm/coverphoto.webp",
+    link: "https://career.power-m.ru",
+    sections: [
+
+    // ─── HERO ────────────────────────────────────────────────────────────────
+    {
+      type: "hero",
+      content: {
+        title: "Карьерный портал Силовых машин",
+        tags: ["UX/UI", "HR Tech", "Конверсия", "Mobile First"],
+      },
+    },
+
+    // ─── КОНТЕКСТ ─────────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Кадры решают всё. Кривой UX решает, что кадров не будет",
+        text: "Силовые машины — крупнейший производитель энергооборудования в России. 70% рынка РФ и СНГ, 13 000+ сотрудников, 5-е место в мире по объёму оборудования, клиенты в 57 странах. При этом карьерный сайт застрял в 2019 году и не конвертировал молодёжь в отклики.\n\nПроблема не в бренде, а в инструменте. Сайт не работал как воронка найма: 70% трафика приходило с телефона, но мобильная версия была непригодна для использования. Фильтры спрятаны, путь до заявки — 7 кликов, вакансии написаны на корпоративном языке.\n\nЗадача: перепроектировать портал, чтобы нанимать 2000 человек в год сам без менеджеров, держащих кандидата за руку. Ограничения: строгий брендбук, 1С-Битрикс, запрет на изменение цветовой палитры.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/context.webp",
+        loading: "lazy",
+        alt: "Контекст проекта: ситуация, проблема, задача",
+      },
+    },
+
+    // ─── БЕНЧМАРКИНГ ─────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Бенчмаркинг: что делают конкуренты",
+        text: "Прежде чем проектировать, разобрал три сильнейших HR-портала в промышленности: НЛМК, Северсталь и СИБУР. У каждого своя фишка, которую стоило присвоить.\n\nУ НЛМК мощный фильтр прямо в шапке и разделение по направлениям — кандидат попадает в релевантные вакансии за один клик. Плюс Телеграм-канал для связи с HR, потому что молодёжь не звонит по телефону.\n\nУ Северстали дизайн построен на людях. Раздел «Вдохновляем друг друга» с реальными фото сотрудников снимает скептицизм новичка, он видит будущих коллег. Визуальная чистота без перегруженного экрана.\n\nУ СИБУРа карьерные траектории и программы быстрого роста прямо на сайте. Раздел «Кто работает в СИБУРе» с историями сотрудников о карьерном пути формирует доверие, где раньше были только строчки требований.\n\nВывод: красивого сайта мало. Нужна работающая система фильтрации, структура вакансий, доказательства и путь от входа до заявки за минимум времени.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/benchmarkingNLMK.webp",
+        loading: "lazy",
+        alt: "Бенчмаркинг НЛМК: навигация и фильтрация",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/benchmarkingSEVERSTAL.webp",
+        loading: "lazy",
+        alt: "Бенчмаркинг Северстали: трансляция ценностей и визуальная чистота",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/benchmarkingSIBUR.webp",
+        loading: "lazy",
+        alt: "Бенчмаркинг СИБУР: карьерные траектории и социальное доказательство",
+      },
+    },
+
+    // ─── СТРАТЕГИЯ ────────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Стратегия: продавать будущее, а не станки",
+        text: "Чтобы нанять молодёжь, показываем людей и перспективу. Сварщик 25 лет выбирает не между заводами, он выбирает между образом жизни. Поэтому в основу стратегии легли три принципа.\n\nСервисный подход к навигации. Внедряем фильтрацию и структуру вакансий, потому что сайт должен работать как инструмент.\n\nПереходим от перечня обязанностей к историям успеха, карьерным трекам и социальным доказательствам. Кандидат должен увидеть себя через 3 года, а не инструкцию к должности.\n\n70% трафика идёт с телефона. Сварщик ищет работу в метро на старом андройде, не сидит с макбуком в коворкинге.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/strategy.webp",
+        loading: "lazy",
+        alt: "Стратегия: сервисный подход и продажа будущего",
+      },
+    },
+
+    // ─── UX НОВОГО ПОРТАЛА ────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Четыре столпа UX",
+        text: "Быстрый доступ. Фильтры по направлению, городу и обучению вынесены на главный экран — прямо под заголовком. Путь кандидата от входа на сайт до списка релевантных вакансий сокращён до 2 кликов.\n\nИнформация упакована в блоки с иконками и списками, чтобы сканировать контент взглядом, не вчитываясь. Кандидат за секунду понимает, что ему предлагают и чем отличается одна должность от другой.\n\nСтрогая сетка, воздух и контрастные шрифты. Интерфейс не перегружен графикой, поэтому выглядит современно и технологично, при этом остаётся легким для верстки в Битрикс.\n\nФотографии живых сотрудников и настоящего производства. Это работает на доверие, потому что кандидат видит фактические условия и будущих коллег, а не нейросетевые улыбки из фотостоков.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/newportalux.webp",
+        loading: "lazy",
+        alt: "UX нового портала: быстрый доступ, структура, чистота, реальность",
+      },
+    },
+
+    // ─── МОБИЛЬНАЯ АДАПТАЦИЯ ──────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Интерфейс для базового смартфона",
+        text: "Мобильная версия проектировалась как отдельный продукт. Пользователь это рабочий с не дорогим телефоном, у которого нет времени разбираться в меню.\n\nКрупные тач-зоны от 44px исключают случайные нажатия. Контрастные шрифты читаются на улице при ярком солнце. Эффекты при наведении полностью убраны, чтобы не мешать восприятию.\n\nФильтры вынесены на первый экран. Кандидат находит вакансию сразу, без блужданий по меню. Как в Яндекс.Такси: зашёл, выбрал, откликнулся.\n\nВ карточках вакансий убраны абстракции и корпоративный жаргон. Добавлены конкретные факты: что именно делаешь, на каком оборудовании работаешь, есть ли обучение.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/mobileapatationHOW.webp",
+        loading: "lazy",
+        alt: "Принципы мобильной адаптации",
+      },
+    },
+
+    // ─── ГЛАВНАЯ СТРАНИЦА ─────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Сокращаем путь до вакансии на главной",
+        text: "Поисковая строка и фильтры расположены на главном блоке без скролла. Открываешь сайт и первое, что видишь: возможность мгновенно отфильтровать вакансии по направлению, городу и наличию обучения.\n\nПод фильтрами живой блок с реальными открытыми вакансиями. Не абстрактная кнопка «Смотреть все вакансии», а конкретные должности, которые компания нанимает прямо сейчас. Создаем восприятие Силовых машин как активной компании, а не пустого шаблона.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/heroblockofmainpage.webp",
+        loading: "lazy",
+        alt: "Новый главный экран портала — десктоп и мобильный",
+      },
+    },
+
+    // ─── ФАКТЫ ────────────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Блок с цифрами",
+        text: "Цифры работают лучше рекламных текстов, потому что их не нужно интерпретировать. Блок работает на уверенность: это не очередной заводик, который закроется через год. Это системообразующее предприятие с масштабом.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/companyinnumbersblockofmainpage.webp",
+        loading: "lazy",
+        alt: "Блок с ключевыми показателями компании",
+      },
+    },
+
+    // ─── ВИЗУАЛЬНОЕ ДОКАЗАТЕЛЬСТВО ────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Гордость за профессию",
+        text: "Силовые машины производят уникальные вещи: первую российскую тихоходную паровую турбину для АЭС, газовые турбины собственной технологии, гидрогенераторы для крупнейших ГЭС страны.\n\nЕсли кандидат не знает, что стоит за словом «производство» — покажи ему. Формируем гордость за профессию ещё до первого рабочего дня и снимаем скептицизм.\n\nЗдесь нет картинок из фотобанков. Только реальные цеха, реальные машины и реальные сотрудники.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/visualproofblockofmainpage.webp",
+        loading: "lazy",
+        alt: "Блок визуального доказательства: уникальные продукты компании",
+      },
+    },
+
+    // ─── КОНТЕКСТНЫЙ ВЫВОД ВАКАНСИЙ ──────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Ловим горячего кандидата",
+        text: "Стандартная воронка теряет кандидата между страницей «О компании» и списком вакансий — он изучил направление, загорелся, но не знает, куда нажать дальше.\n\nРешение: каждый тематический блок на главной дублирует вакансии своего направления прямо под описанием. Не нужно возвращаться на главную, искать раздел «Вакансии» и заново фильтровать.\n\nПо расчётам, контекстный вывод повышает конверсию в отклик на 30%, потому что устраняет паузу между интересом и действием.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/vacanciesblockofmainpage.webp",
+        loading: "lazy",
+        alt: "Контекстный вывод вакансий направления на главной странице",
+      },
+    },
+
+    // ─── ИНКЛЮЗИВНОСТЬ ────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Женская аудитория без штрафов",
+        text: "Промышленные порталы указывают пол в вакансиях — «Вакансия для девушек» или используют исключительно мужские местоимения. Это прямое нарушение ТК РФ и штраф.\n\nОдновременно компания теряет женскую аудиторию, которая в ряде направлений составляет значительную долю квалифицированных кадров.\n\nРешение: в блоках навигации по направлениям используются фотографии и женщин, и мужчин в равной пропорции. Никаких указаний пола в интерфейсе. Визуал нейтрален по умолчанию. Компания привлекает более широкую аудиторию и одновременно защищена от юридических рисков.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/inclusiveandstudentsblockofmainpage.webp",
+        loading: "lazy",
+        alt: "Инклюзивный дизайн навигации и блок для студентов",
+      },
+    },
+
+    // ─── СТРАНИЦА ВАКАНСИЙ ────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Страница вакансий",
+        text: "Фильтр всегда виден сбоку от списка вакансий. Кандидату не нужно скроллить вверх для изменения параметров. Список позволяет считывать вакансии в 2 раза быстрее, чем карточный формат, потому что информация упорядочена строго горизонтально.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/vacanciespage.webp",
+        loading: "lazy",
+        alt: "Страница вакансий: постоянный фильтр и список",
+      },
+    },
+
+    // ─── ВХОД В ПРОФЕССИЮ ─────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Вход в профессию для тех, кто не знает терминологию",
+        text: "«Обмотчик электромашин» или «дефектоскопист НК» — новичок без опыта в промышленности не понимает, что это за профессии и чем именно занимается специалист каждый день.\n\nВместо списка должностей внедрили блоки с фотографиями реального рабочего места и описанием работы простым языком. Укладываешь обмотки в пазы — вот как это выглядит, вот что ты делаешь руками, вот от чего зависит результат.\n\nОтдельная метка «С обучением» снимает главный страх человека без опыта: «меня не возьмут». Компания сама говорит: возьмём и научим.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/vacanciesifnoexp.webp",
+        loading: "lazy",
+        alt: "Блок вакансий для кандидатов без опыта — карточный формат",
+      },
+    },
+
+    // ─── БЕСШОВНЫЙ ОТКЛИК ─────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Бесшовный отклик: убрали лишние шаги",
+        text: "Стандартный сценарий отклика на промышленных порталах выглядит так: нашёл вакансию → нажал «Откликнуться» → тебя выкинуло на пустую форму → вручную вписываешь должность → заполняешь пять полей → отправляешь. На каждом шаге часть кандидатов уходит.\n\nМы убрали промежуточные шаги. При нажатии «Откликнуться» прямо на странице вакансии форма заявки подтягивает название должности автоматически. Кандидат вписывает только имя и почту.\n\nМеньше трения = меньше отказов на финальном шаге воронки.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/vacanciesifnoexpblockform.webp",
+        loading: "lazy",
+        alt: "Форма бесшовного отклика: поля заполняются автоматически",
+      },
+    },
+
+    // ─── ГЕОГРАФИЯ ────────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "География: масштаб компании как аргумент",
+        text: "Силовые машины присутствуют в России, Беларуси, Узбекистане, Сербии, Турции, Индии, Вьетнаме и Колумбии. Это серьёзный аргумент для кандидата, который думает о карьере, а не просто о работе рядом с домом.\n\nПереработали интерфейс карты: переключатель мгновенно делит представительства и производства. Кандидат видит либо карту продаж (где работают менеджеры), либо карту заводов (где куют железо). Это убирает путаницу и позволяет соискателю сразу найти «свой» город.\n\nБлок географии работает на раздел «О нас», потому что наглядно показывает международный масштаб без слов.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/geographyblockaboutuspage.webp",
+        loading: "lazy",
+        alt: "Интерактивная карта присутствия компании",
+      },
+    },
+
+    // ─── МАСШТАБИРУЕМАЯ СЕТКА / СТАТЬИ ───────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Редактор не сломает верстку",
+        text: "Битрикс — это жесткое ограничение. Контент-менеджеры будут добавлять статьи через стандартный редактор, и дизайн обязан выдерживать любой объём текста без поломки.\n\nУниверсальный шаблон страницы статьи работает на любой длине материала: короткая новость, развёрнутый лонгрид, технический документ. Визуальная иерархия структурирует текст акцентными блоками — заголовки, врезки, списки без вмешательства дизайнера.\n\nВ каждую статью встроен CTA-блок «Откликнуться на вакансию». Корпоративная новость, репортаж с завода, интервью с инженером — точку входа в воронку найма.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/articlepagetop.webp",
+        loading: "lazy",
+        alt: "Верх страницы статьи: шапка и модульная сетка",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/articlepagebottom.webp",
+        loading: "lazy",
+        alt: "Низ страницы статьи: CTA и мобильная версия",
+      },
+    },
+
+    // ─── ИТОГ ─────────────────────────────────────────────────────────────────
+    {
+      type: "summary",
+      content: {
+        title: "Итог",
+        text: "1-е место на федеральном соревновании «Дизайн молодых». Концепция одобрена топ-менеджментом. Клиент получил высококонверсионный интерфейс, который уважает время кандидата и решает конкретную боль: бесперебойный найм на заводы.\n\nКаждое решение в проекте обосновано данными и логикой воронки.",
+        buttons: [
+          { label: "Обсудить проект", url: "https://t.me/liverans", primary: true },
+          ],
+        },
+      },
+    ],
+  },
   {
     id: 1,
     slug: "ithub",
@@ -374,98 +687,323 @@ const projectsRu: Project[] = [
         },
       },
     ],
-  {
-    id: 4,
-    slug: "powerm",
-    title: "Карьерный портал Силовых Машин",
-    category: ["Сайт", "HR-бренд", "UX/UI"],
-    duration: "10 дней",
-    image: "/photos/content/powerm/laptopmockup.webp",
-    link: "https://career.power-m.ru",
-    sections:[
-      {
-        type: "hero",
-        content: {
-          title: "Карьерный портал Силовых Машин",
-          tags:["UX/UI", "HR Tech", "Конверсия", "Mobile First"],
-        },
-      },
-      {
-        type: "text",
-        content: {
-          title: "Кадры решают всё. Плохой UX решает, что кадров не будет",
-          text: "Силовые машины — промышленный гигант, которому нужно нанимать 2000 человек в год. Сварщики, токари, инженеры. Проблема в том, что их старый сайт застрял в 2019 году. Молодёжь закрывала за 3 сек, а соискатели не находили нужную кнопку.\n\nПередо мной стояла задача сделать работающую HR-воронку, не сломав при этом строгий корпоративный брендбук и архаичный движок 1С-Битрикс."
-        },
-      },
-      {
-        type: "image",
-        content: {
-          src: "/photos/content/powerm/context.webp",
-          loading: "lazy",
-          alt: "Контекст и проблематика проекта",
-        },
-      },
-      {
-        type: "text",
-        content: {
-          title: "Мобильная верстка под ЦА",
-          text: "Аналитика показала, что 70% трафика — это мобильные телефоны. Сварщик ищет работу в метро на старом телефоне и не сидит с макбуком в коворкинге. Поэтому мобильная версия стала абсолютным приоритетом.\n\nКрупные тач-зоны от 44px, нет ховеров, фильтры на первом экране. Cократили путь до отклика на вакансию до 2 кликов. Сайт должен работать как приложение доставки: прямо, быстро и предсказуемо.",
-        },
-      },
-      {
-        type: "image",
-        content: {
-          src: "/photos/content/powerm/mobileapatationHOW.webp",
-          loading: "lazy",
-          alt: "Принципы мобильной адаптации",
-        },
-      },
-      {
-        type: "text",
-        content: {
-          title: "Продажа будущего",
-          text: "Кандидат должен за секунды понять: здесь платят, здесь безопасно, здесь нет пережитка прошлого. В карточках профессий заменили корпоративный язык и добавили описания с фактами, чтобы новичок сразу понял, что ему предстоит делать.",
-        },
-      },
-      {
-        type: "image",
-        content: {
-          src: "/photos/content/powerm/heroblockofmainpage.webp",
-          loading: "lazy",
-          alt: "Новый главный экран портала",
-        },
-      },
-      {
-        type: "text",
-        content: {
-          title: "1С-Битрикс как данность",
-          text: "Дизайн, который нельзя сверстать — фантазия аутиста. Сайт будет натягиваться на компоненты Битрикса сторонними подрядчиками. \n\nПоэтому архитектура построена на масштабируемой модульной сетке. Контент-менеджеры добавляют статьи любой длины без риска, что вёрстка сломается. СТА интегрированы в каждую статью, любая страница становится точкой входа в воронку найма.",
-        },
-      },
-      {
-        type: "image",
-        content: {
-          src: "/photos/content/powerm/articlepagetop.webp",
-          loading: "lazy",
-          alt: "Масштабируемая модульная сетка для Битрикс",
-        },
-      },
-      {
-        type: "summary",
-        content: {
-          title: "Итог",
-          text: "1-е место в федеральном соревновании. Концепт утверждён топ-менеджментом. Заказчик получил конверсионный интерфейс, уважающий время кандидата и решающий конкретную боль бизнеса — бесперебойный найм людей на заводы.",
-          buttons:[
-            { label: "Обсудить проект", url: "https://t.me/liverans", primary: true },
-          ],
-        },
-      },
-    ],
   },
 ];
 
 // --- ENGLISH DATA ---
 const projectsEn: Project[] = [
+  {
+    id: 4,
+    slug: "powerm",
+    title: "Power Machines Career Portal",
+    category:["Website", "HR Tech", "UX/UI"],
+    badge: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 141.7 141.7" xml:space="preserve"><style>.st0{fill:#FF0033;}.st1{fill:#FFFFFF;}</style><polygon class="st0" points="70.9,0 78.4,13.8 89.2,2.4 92.9,17.7 106.3,9.5 105.9,25.2 121,20.8 116.5,35.8 132.2,35.4 124.1,48.8 139.3,52.5 128,63.4 141.7,70.9 128,78.4 139.3,89.2 124.1,92.9 132.2,106.3 116.5,105.9 121,121 105.9,116.5 106.3,132.2 92.9,124.1 89.2,139.3 78.4,128 70.9,141.7 63.4,128 52.5,139.3 48.8,124.1 35.4,132.2 35.8,116.5 20.8,121 25.2,105.9 9.5,106.3 17.7,92.9 2.4,89.2 13.8,78.4 0,70.9 13.8,63.4 2.4,52.5 17.7,48.8 9.5,35.4 25.2,35.8 20.8,20.8 35.8,25.2 35.4,9.5 48.8,17.7 52.5,2.4 63.4,13.8"/><g><path class="st1" d="M85,100H56.7v-5.9h10.5v-39H56.7v-5.3c4,0,6.9-0.6,8.8-1.7c1.9-1.1,2.9-3.3,3.2-6.4h6.1v52.4H85V100z"/></g></svg>`,
+    duration: "10 days",
+    image: "/photos/content/powerm/coverphoto.webp",
+    link: "https://career.power-m.ru",
+    sections: [
+
+    // ─── HERO ────────────────────────────────────────────────────────────────
+    {
+      type: "hero",
+      content: {
+        title: "Power Machines Career Portal",
+        tags: ["UX/UI", "HR Tech", "Conversion", "Mobile First"],
+      },
+    },
+
+    // ─── CONTEXT ──────────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Personnel is everything. Broken UX means no personnel.",
+        text: "Power Machines is Russia's largest energy equipment manufacturer. 70% of the Russian and CIS market, 13,000+ employees, 5th place globally by equipment volume, clients in 57 countries. Yet the career site was stuck in 2019 and wasn't converting young talent into applicants.\n\nThe problem wasn't the brand — it was the tool. The site didn't function as a hiring funnel: 70% of traffic came from mobile, but the mobile version was unusable. Filters were buried, the path to an application took 7 clicks, and job listings were written in HR-speak, not plain language.\n\nThe task: redesign the portal so it hires 2,000 people a year on its own — no managers holding candidates by the hand. Constraints: a strict brand book, a legacy 1C-Bitrix engine, and no changes to the color palette.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/context_en.webp",
+        loading: "lazy",
+        alt: "Project context: situation, problem, task",
+      },
+    },
+
+    // ─── BENCHMARKING ─────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Benchmarking: what competitors get right",
+        text: "Before designing anything, I analyzed the three strongest HR portals in heavy industry: NLMK, Severstal, and SIBUR. Each had something worth borrowing.\n\nNLMK has a powerful filter right in the header with direction-based navigation — a candidate reaches relevant vacancies in one click. Plus a Telegram channel for HR communication, because young people don't make phone calls.\n\nSeverstal's design is built around people. The 'We inspire each other' section with real employee photos breaks down a newcomer's skepticism — they see future colleagues, not corporate gloss. Visual clarity with no cluttered screens.\n\nSIBUR shows career trajectories and fast-track growth programs directly on the site. The 'Who works at SIBUR' section with employee career stories builds trust where previously there were only lists of requirements.\n\nConclusion: a good-looking site is not enough. You need a working system — filtering, structured vacancies, social proof, and a path from landing to application in the fewest steps possible.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/benchmarkingNLMK_en.webp",
+        loading: "lazy",
+        alt: "NLMK benchmarking: navigation and filtering",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/benchmarkingSEVERSTAL_en.webp",
+        loading: "lazy",
+        alt: "Severstal benchmarking: values communication and visual clarity",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/benchmarkingSIBUR_en.webp",
+        loading: "lazy",
+        alt: "SIBUR benchmarking: career trajectories and social proof",
+      },
+    },
+
+    // ─── STRATEGY ─────────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Strategy: sell the future, not the machines",
+        text: "To attract young talent, you show people and perspective — not equipment. A 25-year-old welder isn't choosing between factories; they're choosing between lifestyles. The strategy rests on three principles.\n\nA service approach to navigation. Filtering and vacancy structure, because the site must work as a tool — not a brochure.\n\nSelling the future. We shift from listing job duties to success stories, career tracks, and social proof. The candidate should picture themselves in three years, not read an instruction manual for a role.\n\nMobile priority. 70% of traffic comes from phones. A welder searches for jobs on the subway using an old Android — not sitting with a MacBook in a coworking space.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/strategy_en.webp",
+        loading: "lazy",
+        alt: "Strategy: service-first navigation and selling the future",
+      },
+    },
+
+    // ─── UX OF THE NEW PORTAL ─────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Four pillars of UX",
+        text: "Quick access. Filters by direction, city, and training availability are placed on the main screen — right below the headline. The candidate's path from landing on the site to a list of relevant vacancies is cut down to 2 clicks.\n\nStructured presentation. Information is packed into blocks with icons and lists so users can scan content at a glance without reading every word. In seconds, a candidate understands what's on offer and how one role differs from another.\n\nVisual clarity. A strict grid, generous whitespace, and high-contrast typography. The interface isn't overloaded with graphics — it looks modern and precise, and stays easy to implement in Bitrix.\n\nReality. Photos of actual employees and real production floors. This builds trust because the candidate sees genuine working conditions and future colleagues — not AI-generated smiles from stock libraries.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/newportalux_en.webp",
+        loading: "lazy",
+        alt: "New portal UX: quick access, structure, clarity, reality",
+      },
+    },
+
+    // ─── MOBILE ADAPTATION ────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "An interface for the basic smartphone",
+        text: "The mobile version was designed as a standalone product, not a scaled-down desktop. The user is a blue-collar worker with an inexpensive phone who has no time to navigate complex menus.\n\nLarge touch zones from 44px prevent accidental taps. High-contrast fonts are readable outdoors in bright sunlight. Hover effects are removed entirely — they don't exist on touchscreens and only break the experience.\n\nFilters are on the first screen. A candidate finds a relevant vacancy immediately, without wandering through menus. Like a ride-hailing app: open, pick, apply.\n\nJob cards strip out corporate jargon and abstract language. Concrete facts replace it: what you actually do, what equipment you work with, whether training is included.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/mobileapatationHOW_en.webp",
+        loading: "lazy",
+        alt: "Mobile adaptation principles",
+      },
+    },
+
+    // ─── MAIN PAGE ────────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Cutting the path to a vacancy on the homepage",
+        text: "The search bar and filters are positioned in the hero block — no scrolling required. A candidate opens the site and the very first thing they see is the ability to instantly filter vacancies by direction, city, and training availability.\n\nBelow the filters sits a live block of real open vacancies. Not an abstract 'View all vacancies' button, but specific roles the company is actively hiring for right now. This creates the impression of Power Machines as a dynamic, active employer — not an empty template.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/heroblockofmainpage_en.webp",
+        loading: "lazy",
+        alt: "New hero section of the portal — desktop and mobile",
+      },
+    },
+
+    // ─── FACTS ────────────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "The numbers block",
+        text: "Numbers work better than ad copy because they require no interpretation. The block builds confidence: this isn't some small factory that might close next year. This is a backbone enterprise with real scale.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/companyinnumbersblockofmainpage_en.webp",
+        loading: "lazy",
+        alt: "Company key metrics block",
+      },
+    },
+
+    // ─── VISUAL PROOF ─────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Pride in the profession",
+        text: "Power Machines makes one-of-a-kind things: Russia's first low-speed steam turbine for a nuclear power plant, proprietary gas turbines, hydrogenerators for the country's largest hydroelectric stations.\n\nIf a candidate doesn't know what 'manufacturing' actually means here — show them. Demonstrating real products builds professional pride before day one on the job and removes skepticism before it starts.\n\nNo stock photos. Only real workshops, real machines, and real employees.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/visualproofblockofmainpage_en.webp",
+        loading: "lazy",
+        alt: "Visual proof block: unique company products",
+      },
+    },
+
+    // ─── CONTEXTUAL VACANCY OUTPUT ────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Catching the hot candidate",
+        text: "A standard funnel loses the candidate somewhere between the 'About' page and the vacancies list — they explored a direction, got interested, but don't know where to click next.\n\nThe fix: every thematic block on the homepage duplicates the vacancies from its own direction right below the description. No need to go back to the homepage, find the 'Vacancies' section, and filter from scratch.\n\nContextual vacancy display is estimated to increase application conversion by 30%, because it eliminates the gap between interest and action.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/vacanciesblockofmainpage_en.webp",
+        loading: "lazy",
+        alt: "Contextual vacancy display by direction on the homepage",
+      },
+    },
+
+    // ─── INCLUSIVITY ──────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "A female audience — without the fines",
+        text: "Most industrial job portals specify gender in listings — 'position for men' or use exclusively male pronouns. This is a direct violation of Russian labor law and carries real financial risk.\n\nAt the same time, those companies are cutting off a female audience that in many specializations represents a significant share of qualified talent.\n\nThe fix: navigation blocks for each job direction use photos of both women and men in equal proportion. No gender indicators anywhere in the interface. The visual is neutral by default. The company reaches a broader audience and is legally protected at the same time.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/inclusiveandstudentsblockofmainpage_en.webp",
+        loading: "lazy",
+        alt: "Inclusive navigation design and student onboarding block",
+      },
+    },
+
+    // ─── VACANCIES PAGE ───────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Vacancies page",
+        text: "The filter is always visible alongside the vacancy list. A candidate never needs to scroll back to the top to change parameters — they adjust on the fly without losing their place. The list format lets users scan vacancies twice as fast as a card layout, because information is organized in a clean horizontal flow.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/vacanciespage_en.webp",
+        loading: "lazy",
+        alt: "Vacancies page: persistent filter and list view",
+      },
+    },
+
+    // ─── ENTRY INTO THE PROFESSION ────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Entry into the profession for those who don't know the terminology",
+        text: "'Electrical machine winder' or 'NDT defectoscopist' — a newcomer with no industrial background has no idea what these roles are or what the work actually looks like day to day.\n\nInstead of a text list of job titles, we introduced visual cards with a real photo of the workplace and a plain-language description of the work. You're laying windings into stator slots — here's what it looks like, here's what you do with your hands, here's what the result depends on.\n\nThe 'With training' tag addresses the biggest fear of someone without experience: 'they won't hire me.' The company answers directly: we will, and we'll teach you.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/vacanciesifnoexp_en.webp",
+        loading: "lazy",
+        alt: "Entry-level vacancy cards with photos and plain descriptions",
+      },
+    },
+
+    // ─── SEAMLESS APPLICATION ─────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Seamless application: removed the unnecessary steps",
+        text: "The standard application flow on industrial portals looks like this: found a vacancy → clicked 'Apply' → redirected to a blank form → manually typed the job title → filled in five fields → submitted. Candidates drop off at every step.\n\nWe removed the friction. When a candidate clicks 'Apply' directly on the vacancy page, the application form auto-populates the job title. The candidate only enters their name and email.\n\nLess friction = fewer drop-offs at the final stage of the funnel.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/vacanciesifnoexpblockform_en.webp",
+        loading: "lazy",
+        alt: "Seamless application form: fields auto-populated from the vacancy",
+      },
+    },
+
+    // ─── GEOGRAPHY ────────────────────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Geography: company scale as an argument",
+        text: "Power Machines operates in Russia, Belarus, Uzbekistan, Serbia, Turkey, India, Vietnam, and Colombia. That's a compelling argument for a candidate thinking about a career, not just a job close to home.\n\nWe redesigned the map interface: a toggle instantly separates offices and manufacturing plants. A candidate sees either a sales map (where managers work) or a factories map (where things are built). This eliminates confusion and lets an applicant find their city immediately.\n\nThe geography block also serves the 'About Us' section — it communicates international scale without a single word of marketing copy.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/geographyblockaboutuspage_en.webp",
+        loading: "lazy",
+        alt: "Interactive map of company presence",
+      },
+    },
+
+    // ─── SCALABLE GRID / ARTICLES ─────────────────────────────────────────────
+    {
+      type: "text",
+      content: {
+        title: "Content editors won't break the layout",
+        text: "Bitrix is a hard constraint. Content managers will add articles through a standard editor, and the design must hold up at any content length without breaking.\n\nThe universal article page template works at any depth: a short news post, a long-form feature, a technical document. Visual hierarchy structures the text with accent blocks — headings, pull quotes, lists — without requiring a designer's intervention.\n\nEvery article has a built-in 'Apply for a vacancy' CTA block. A company news piece, a factory floor report, an interview with an engineer — each becomes an entry point into the hiring funnel.",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/articlepagetop_en.webp",
+        loading: "lazy",
+        alt: "Article page top: header and modular grid",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/photos/content/powerm/articlepagebottom_en.webp",
+        loading: "lazy",
+        alt: "Article page bottom: CTA block and mobile view",
+      },
+    },
+
+    // ─── SUMMARY ──────────────────────────────────────────────────────────────
+    {
+      type: "summary",
+      content: {
+        title: "Summary",
+        text: "1st place at the federal 'Young Design' competition. The concept was approved by top management. The client received a high-conversion interface that respects candidates' time and solves a concrete business problem: uninterrupted hiring across their factories.\n\nEvery decision in this project is backed by data and funnel logic.",
+        buttons: [
+          { label: "Discuss Project", url: "https://t.me/liverans", primary: true },
+        ],
+      },
+    },
+    ],
+  },
   {
     id: 1,
     slug: "ithub",
@@ -814,93 +1352,6 @@ const projectsEn: Project[] = [
           text: "The client received a stable flow of targeted leads, and we demonstrated that a systematic approach and logic in design defeat subjective 'like or dislike'.",
           buttons: [
             { label: "View Website", url: "http://ysreda.tilda.ws/", primary: false },
-            { label: "Discuss Project", url: "https://t.me/liverans", primary: true },
-          ],
-        },
-      },
-    ],
-  {
-    id: 4,
-    slug: "powerm",
-    title: "Power Machines Career Portal",
-    category:["Website", "HR Tech", "UX/UI"],
-    duration: "14 days",
-    image: "/photos/content/powerm/laptopmockup.webp",
-    link: "https://career.power-m.ru",
-    sections:[
-      {
-        type: "hero",
-        content: {
-          title: "Power Machines Career Portal",
-          tags:["UX/UI", "HR Tech", "Conversion", "Mobile First"],
-        },
-      },
-      {
-        type: "text",
-        content: {
-          title: "Personnel is everything. Shitty UX means no personnel.",
-          text: "«Power Machines» is an industrial giant that needs to hire 2,000 people a year. Welders, turners, engineers. The problem? Their old site was stuck in 2019 and looked like a dusty bulletin board. Zoomers closed it in 3 seconds, and blue-collar workers couldn't find the 'Apply' button.\n\nMy task was to turn this legacy crap into a working HR funnel without breaking their strict brand book or the archaic 1C-Bitrix engine. No 'design for the sake of design'. Just hardcore conversion."
-        },
-      },
-      {
-        type: "image",
-        content: {
-          src: "/photos/content/powerm/context.webp",
-          loading: "lazy",
-          alt: "Project context and problems",
-        },
-      },
-      {
-        type: "text",
-        content: {
-          title: "Mobile First for Blue-Collar Workers",
-          text: "Analytics showed that 70% of traffic comes from mobile devices. A welder looks for a job in the subway on an old Android, not sitting with a MacBook in a coworking space. Therefore, the mobile version became the absolute priority.\n\nMassive touch zones (44px+), zero hover effects (they don't exist on touchscreens), and filters right on the first screen. We reduced the path to a job application down to 2 clicks. The site should work like an Uber app: stupidly simple, fast, and predictable.",
-        },
-      },
-      {
-        type: "image",
-        content: {
-          src: "/photos/content/powerm/mobileapatationHOW.webp",
-          loading: "lazy",
-          alt: "Mobile adaptation principles",
-        },
-      },
-      {
-        type: "text",
-        content: {
-          title: "Selling the Future Instead of Text Blocks",
-          text: "Instead of abstract promises, we implemented visual proof blocks. Only real photos of clean workshops and real people in hard hats—no plastic stock smiles or fucked-up AI generations.\n\nThe candidate must understand in seconds: they pay well here, it's safe, and it's not a Soviet remnant. In the job cards, we removed corporate jargon and added clear, fact-based descriptions so a newbie instantly understands what they will be doing.",
-        },
-      },
-      {
-        type: "image",
-        content: {
-          src: "/photos/content/powerm/heroblockofmainpage.webp",
-          loading: "lazy",
-          alt: "New hero section of the portal",
-        },
-      },
-      {
-        type: "text",
-        content: {
-          title: "1C-Bitrix as a Given",
-          text: "A design that can't be coded is an autistic fantasy. The site will be integrated into Bitrix components by the client's third-party developers.\n\nTherefore, the entire architecture is built on a strict, scalable modular grid. It allows content managers to add articles of any length without the risk of the layout going to shit. CTAs are integrated into every article, making absolutely any page an entry point into the hiring funnel.",
-        },
-      },
-      {
-        type: "image",
-        content: {
-          src: "/photos/content/powerm/articlepagetop.webp",
-          loading: "lazy",
-          alt: "Scalable modular grid for Bitrix",
-        },
-      },
-      {
-        type: "summary",
-        content: {
-          title: "Summary",
-          text: "1st place in the federal 'Young Design' competition. The concept was approved by top management. The client received a modern, predictable, and high-conversion interface that respects the candidate's time and solves a specific business pain: uninterrupted hiring for their factories.",
-          buttons:[
             { label: "Discuss Project", url: "https://t.me/liverans", primary: true },
           ],
         },

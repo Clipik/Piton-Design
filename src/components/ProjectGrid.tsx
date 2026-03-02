@@ -19,6 +19,8 @@ export default function ProjectGrid({ locale, projects }: ProjectGridProps) {
 
   const [activeCategory, setActiveCategory] = useState(categoriesList[0]); // "Все" или "All"
 
+  const [activeBadge, setActiveBadge] = useState<number | null>(null);
+
   // 2. ФИЛЬТРАЦИЯ
   const filteredProjects = activeCategory === categoriesList[0]
     ? projects
@@ -67,6 +69,28 @@ export default function ProjectGrid({ locale, projects }: ProjectGridProps) {
                     </span>
                   </div>
                 ))}
+                {'badge' in project && project.badge && (
+                  <div 
+                    className="relative"
+                    onClick={(e) => {
+                      e.preventDefault(); // чтобы не открывал страницу проекта
+                      setActiveBadge(activeBadge === project.id ? null : project.id);
+                    }}
+                  >
+                    <div 
+                      className="w-8 h-8 shadow-2xl cursor-pointer"
+                      dangerouslySetInnerHTML={{ __html: project.badge }} 
+                    />
+                    {/* Тултип — на десктопе по hover, на мобилке по клику */}
+                    <div className={`absolute right-0 top-full mt-2 z-50 max-w-[200px] whitespace-normal md:whitespace-nowrap md:max-w-none bg-[#222222] text-white text-[0.75rem] font-['Golos_Text'] px-3 py-1.5 rounded-lg transition-all duration-200 pointer-events-none
+                      ${activeBadge === project.id ? 'opacity-100 visible' : 'opacity-0 invisible'}
+                      group-hover/badge:opacity-100 group-hover/badge:visible`}
+                    >
+                      {locale === 'ru' ? '🏆 1 место в федеральном дизайн-соревновании' : '🏆 1st place in a national design competition'}
+                      <div className="absolute bottom-full right-3 border-4 border-transparent border-b-[#222222]" />
+                    </div>
+                  </div>
+                )}
               </div>
 
               <Image

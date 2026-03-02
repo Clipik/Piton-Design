@@ -1,9 +1,17 @@
 // src/app/page.tsx
 
-import { redirect } from "next/navigation";
+"use client";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function RootPage() {
-  // На статике мы не знаем язык пользователя.
-  // Поэтому тупо швыряем всех на русский (или английский).
-  redirect("/ru");
+  const router = useRouter();
+  
+  useEffect(() => {
+    const saved = localStorage.getItem("locale");
+    const browser = navigator.language.startsWith("ru") ? "ru" : "en";
+    router.replace(`/${saved || browser}`);
+  }, [router]);
+
+  return null;
 }

@@ -17,9 +17,13 @@ interface HeroProps {
 export default function Hero({ locale, content }: HeroProps) {
   const [mounted, setMounted] = useState(false);
   const [isVideoEnded, setIsVideoEnded] = useState(false);
+  const [videoSrc, setVideoSrc] = useState("/videos/coinshero_mobile.mp4");
 
   useEffect(() => {
     setMounted(true);
+    if (window.innerWidth >= 768) {
+      setVideoSrc("/videos/coinshero_desktop.mp4");
+    }
   }, []);
 
   const VIDEO_SETTINGS = {
@@ -98,41 +102,18 @@ export default function Hero({ locale, content }: HeroProps) {
           */}
           <div className={`w-full h-full transition-opacity duration-300 ${isVideoEnded ? 'opacity-0' : 'opacity-100'}`}>
             <TransparentVideo
+              src={videoSrc}
               preload="auto"
               // @ts-expect-error fetchPriority prop
               fetchPriority="high"
-              
               brightness={VIDEO_SETTINGS.brightness} 
               contrast={VIDEO_SETTINGS.contrast}
               maskTop={VIDEO_SETTINGS.maskTop}
               className="w-full h-full object-contain object-bottom mx-auto transition-transform duration-0 translate-y-[50dvh] md:translate-y-0"
-              
               onEnded={() => setIsVideoEnded(true)}
-              
-              // ВОТ ТУТ ГЛАВНОЕ: постер загрузится моментально благодаря layout.tsx
               poster="/photos/coinshero-placeholder.webp" 
-            >
-              {/* 
-               1. ДЕСКТОП (Приоритет №1)
-            */}
-            <source 
-                media="(min-width: 768px)" 
-                src="/videos/coinshero_desktop.mp4" 
-                type="video/mp4" 
             />
-
-            {/* 
-               3. МОБИЛКА (Фоллбек для всех остальных)
-               Сюда провалится всё, что меньше 768px.
-               Это обычный H.264, который работает везде.
-            */}
-            <source 
-                src="/videos/coinshero_mobile.mp4" 
-                type="video/mp4" 
-            />
-
-          </TransparentVideo>
-        </div>
+          </div>
 
       </div>
     </section>

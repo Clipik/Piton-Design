@@ -5,15 +5,11 @@ export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://gopiton.com'
-  const locales = ['ru', 'en'] // Твои языки
+  const locales = ['ru', 'en']
 
-  // Создаем пустой массив для ссылок
   const sitemapEntries: MetadataRoute.Sitemap = []
 
-  // Пробегаемся по каждому языку
   for (const locale of locales) {
-    
-    // 1. Статические страницы (Главная, Проекты, и т.д.)
     sitemapEntries.push(
       {
         url: `${baseUrl}/${locale}`,
@@ -22,23 +18,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 1,
       },
       {
-        url: `${baseUrl}/${locale}/projects`,
+        url: `${baseUrl}/${locale}/privacy`,
         lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.9,
+        changeFrequency: 'yearly',
+        priority: 0.3,
+      },
+      {
+        url: `${baseUrl}/${locale}/terms`,
+        lastModified: new Date(),
+        changeFrequency: 'yearly',
+        priority: 0.3,
       }
-      // Сюда добавь privacy, terms если есть
     )
 
-    // 2. Динамические проекты из твоего файла
-    // Твоя функция getProjects синхронная, так что await не нужен
     const projects = getProjects(locale)
-
     for (const project of projects) {
       sitemapEntries.push({
         url: `${baseUrl}/${locale}/projects/${project.slug}`,
-        // Если хочешь дату из проекта, придется парсить строку, но можно забить и ставить текущую
-        lastModified: new Date(), 
+        lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.8,
       })

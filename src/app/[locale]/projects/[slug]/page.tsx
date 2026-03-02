@@ -6,6 +6,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar"; 
 import CtaButton from "@/components/CtaButton"; 
+import BadgeWithTooltip from "@/components/BadgeWithTooltip";
 
 // Типизация параметров (Next.js 15 требует Promise)
 type Props = {
@@ -34,49 +35,6 @@ export async function generateStaticParams() {
 const fixOrphans = (text: string) => {
   if (!text) return text;
   return text.replace(/(\s|^)([а-яА-ЯёЁa-zA-Z]{1,3})\s/g, '$1$2\u00A0');
-};
-
-// Компонент кружочка статистики
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const StatCircle = ({ value, label, sub, desc }: any) => {
-  const radius = 40;
-  const circumference = 2 * Math.PI * radius;
-  const strokeDashoffset = circumference - (value / 100) * circumference;
-
-  return (
-    <div className="bg-white rounded-[1rem] p-6 flex flex-col sm:flex-row items-center gap-6 shadow-sm border border-gray-100 h-full w-full">
-      <div className="relative w-24 h-24 flex-shrink-0">
-        <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="40" stroke="#E5E7EB" strokeWidth="8" fill="transparent" />
-          <circle
-            cx="50"
-            cy="50"
-            r="40"
-            stroke="#44941F"
-            strokeWidth="8"
-            fill="transparent"
-            strokeDasharray={circumference}
-            strokeDashoffset={strokeDashoffset}
-            strokeLinecap="round"
-          />
-        </svg>
-        <span className="absolute inset-0 flex items-center justify-center text-2xl font-['Golos_Text'] font-medium text-[#222222]">
-          {value}
-        </span>
-      </div>
-      <div className="text-center sm:text-left flex-1">
-        <h4 className="text-[1.1rem] font-['Golos_Text'] font-medium text-[#222222] leading-tight mb-1">
-          {fixOrphans(label)}
-        </h4>
-        <span className="text-[0.75rem] font-['Golos_Text'] font-bold text-[#888888] uppercase tracking-wider block mb-2">
-          {sub}
-        </span>
-        <p className="text-[0.85rem] font-['Golos_Text'] text-[#222222] opacity-80 leading-relaxed">
-          {fixOrphans(desc)}
-        </p>
-      </div>
-    </div>
-  );
 };
 
 // --- САМА СТРАНИЦА ---
@@ -116,25 +74,26 @@ export default async function ProjectPage({ params }: Props) {
               switch (section.type) {
                 case "hero":
                   return (
-                    // Hero на всю ширину
                     <div key={index} className="flex flex-col items-start gap-8 w-full">
                       <div className="flex flex-col gap-6 w-full">
                         <h1 className="text-[2rem] md:text-[3rem] font-['Unbounded'] font-semibold text-[#222222] leading-[1.1]">
                           {fixOrphans(section.content.title)}
                         </h1>
                         <div className="flex flex-wrap gap-2 w-full">
-                          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                           {section.content.tags.map((tag: any, i: number) => (
-                            <div 
-                              key={i} 
-                              className="bg-[#F7F7FA] px-4 py-2 flex items-center justify-center"
-                              style={{ borderRadius: '2450px' }}
-                            >
-                              <span className="text-[0.85rem] font-regular text-[#222222] font-['Golos_Text']">
-                                {tag}
-                              </span>
+                            <div key={i} className="bg-[#F7F7FA] px-4 py-2 flex items-center justify-center" style={{ borderRadius: '2450px' }}>
+                              <span className="text-[0.85rem] font-regular text-[#222222] font-['Golos_Text']">{tag}</span>
                             </div>
                           ))}
+
+                          {/* Бейдж награды */}
+                          {project.badge && (
+                            <BadgeWithTooltip 
+                              badge={project.badge} 
+                              label={locale === 'ru' ? '🏆 1 место в федеральном соревновании по дизайну' : '🏆 1st place in a national design competition'} 
+                            />
+                          )}
+
                         </div>
                       </div>
                       <div className="w-full rounded-[1rem] overflow-hidden bg-[#FFFFFF] aspect-video relative">

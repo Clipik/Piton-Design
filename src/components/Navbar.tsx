@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react"; // ДОБАВИЛ useEffect
 import Link from "next/link";
 import Typewriter from "./Typewriter";
@@ -13,6 +14,7 @@ export default function Navbar({ locale }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const pathname = usePathname();
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -118,10 +120,10 @@ export default function Navbar({ locale }: NavbarProps) {
             
             <div className="absolute top-full right-0 mt-2 w-32 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
               <div className="flex flex-col py-1">
-                <Link href="/ru" className="flex items-center gap-3 px-4 py-3 hover:bg-[#FF0033]/5 text-[#222222] hover:text-[#FF0033] transition-colors">
+                <Link href={`/ru${pathname.replace(/^\/(ru|en)/, '')}`} className="flex items-center gap-3 px-4 py-3 hover:bg-[#FF0033]/5 text-[#222222] hover:text-[#FF0033] transition-colors">
                   <span className="text-[1rem] font-medium">RU</span>
                 </Link>
-                <Link href="/en" className="flex items-center gap-3 px-4 py-3 hover:bg-[#FF0033]/5 text-[#222222] hover:text-[#FF0033] transition-colors">
+                <Link href={`/en${pathname.replace(/^\/(ru|en)/, '')}`} className="flex items-center gap-3 px-4 py-3 hover:bg-[#FF0033]/5 text-[#222222] hover:text-[#FF0033] transition-colors">
                   <span className="text-[1rem] font-medium">EN</span>
                 </Link>
               </div>
@@ -178,10 +180,10 @@ export default function Navbar({ locale }: NavbarProps) {
            <div className="flex flex-col gap-4 border-t border-gray-100 pt-4">
              {/* Language Selection Mobile */}
              <div className="flex gap-2 justify-center">
-                <Link href="/ru" className={`flex-1 py-2 text-center rounded-full border ${locale === 'ru' ? 'bg-[#FFFFFF] text-[#222222] border-[#FF0033]' : 'text-[#222222] border-gray-200'}`}>
+                <Link href={`/ru${pathname.replace(/^\/(ru|en)/, '')}`} className={`flex-1 py-2 text-center rounded-full border ${locale === 'ru' ? 'bg-[#FFFFFF] text-[#222222] border-[#FF0033]' : 'text-[#222222] border-gray-200'}`}>
                   RU
                 </Link>
-                <Link href="/en" className={`flex-1 py-2 text-center rounded-full border ${locale === 'en' ? 'bg-[#FFFFFF] text-[#222222] border-[#FF0033]' : 'text-[#222222] border-gray-200'}`}>
+                <Link href={`/en${pathname.replace(/^\/(ru|en)/, '')}`} className={`flex-1 py-2 text-center rounded-full border ${locale === 'en' ? 'bg-[#FFFFFF] text-[#222222] border-[#FF0033]' : 'text-[#222222] border-gray-200'}`}>
                   EN
                 </Link>
              </div>
