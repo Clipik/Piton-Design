@@ -136,21 +136,6 @@ export default async function ProjectPage({ params }: Props) {
                       </p>
                     </div>
                   );
-
-                case "stats":
-                  return (
-                    <div key={index} className="w-full bg-[#F7F7FA] p-6 md:p-8 rounded-[1rem]">
-                      <h3 className="text-[1.25rem] font-['Unbounded'] font-semibold text-[#222222] mb-6">
-                        {ui.metrics}
-                      </h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                        {section.content.map((stat: any, i: number) => (
-                          <StatCircle key={i} {...stat} />
-                        ))}
-                      </div>
-                    </div>
-                  );
                 
                 case "summary":
                   return (
