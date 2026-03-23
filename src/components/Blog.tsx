@@ -8,7 +8,7 @@ interface BlogPost {
   title: string;
   category: string;
   image: string;
-  url: string;
+  url?: string;
 }
 
 interface BlogProps {
