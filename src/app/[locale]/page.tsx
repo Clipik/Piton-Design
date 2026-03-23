@@ -8,6 +8,8 @@ import About from "@/components/About";
 import Footer from "@/components/Footer";
 import { getProjects } from "@/data/projects";
 import { getContent } from "@/data/content";
+import Blog from "@/components/Blog";
+import { getBlogPosts } from "@/data/blog";
 
 interface HomeProps {
   params: Promise<{
@@ -19,7 +21,7 @@ export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
 
   const projects = getProjects(locale);
-  
+  const blogPosts = getBlogPosts(locale);
   const dict = getContent(locale);
 
   return (
@@ -35,9 +37,9 @@ export default async function Home({ params }: HomeProps) {
           </div>
         </section>
 
-        {/* Проделай то же самое для остальных, когда перепишешь их под пропсы */}
         <Pricing locale={locale} content={dict.pricing} />
         <About locale={locale} content={dict.about} />
+        <Blog locale={locale} title={dict.blog.title} posts={blogPosts} />
         <Footer locale={locale} content={dict.footer} />
       </main>
     </div>
