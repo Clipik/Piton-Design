@@ -6,7 +6,7 @@ interface BlogPost {
   id: number;
   slug: string;
   title: string;
-  category: string;
+  category: string[];
   image: string;
   url?: string;
 }
@@ -72,7 +72,7 @@ export default function Blog({ locale, title, posts }: BlogProps) {
                 {post.title}
               </p>
               <span className="text-[1rem] font-['Golos_Text'] text-[#888888]">
-                {post.category}
+                {Array.isArray(post.category) ? post.category.join(", ") : post.category}
               </span>
             </div>
           </Link>
