@@ -15,7 +15,7 @@ const postsRu: BlogPost[] = [
     id: 1,
     slug: "yandex-fuckup",
     title: "Как потерять оффер Яндекса из-за двух букв",
-    category: "Аутоскопия",
+    category: ["Аутоскопия"],
     duration: "3 дня",
     image: "/photos/content/yandex-fuckup/coverphoto.webp",
     link: "#",
