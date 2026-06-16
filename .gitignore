@@ -42,3 +42,8 @@ next-env.d.ts
 dump.py
 dump_project.sh
 project_dump.txt
+
+
+config.json
+links.json
+users.json
