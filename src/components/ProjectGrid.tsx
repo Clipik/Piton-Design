@@ -98,6 +98,9 @@ export default function ProjectGrid({ locale, projects }: ProjectGridProps) {
                 alt={project.title}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
+                style={{
+                  viewTransitionName: `project-image-${project.slug}`,
+                } as React.CSSProperties}
               />
             </div>
 

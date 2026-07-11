@@ -98,12 +98,15 @@ export default async function ProjectPage({ params }: Props) {
                       </div>
                       <div className="w-full rounded-[1rem] overflow-hidden bg-[#FFFFFF] aspect-video relative">
                          <Image
-                            src={project.image}
-                            alt={project.title}
-                            fill
-                            className="object-contain"
-                            priority
-                          />
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-contain"
+                          priority
+                          style={{
+                            viewTransitionName: `project-image-${slug}`,
+                          } as React.CSSProperties}
+                        />
                       </div>
                     </div>
                   );

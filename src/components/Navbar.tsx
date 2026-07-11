@@ -41,8 +41,10 @@ export default function Navbar({ locale }: NavbarProps) {
   }, [lastScrollY, isOpen]); // Перезапускаем эффект, если изменился скролл или состояние меню
 
   return (
-    // Добавил transition и динамический класс
-    <nav className={`fixed top-0 w-full z-50 bg-white border-b border-[#F0F0F0] transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <nav 
+      className={`fixed top-0 w-full z-50 bg-white border-b border-[#F0F0F0] transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
+      style={{ viewTransitionName: "main-header" } as React.CSSProperties}
+    >
       <div className="max-w-[1200px] mx-auto px-4 py-3 flex items-center justify-between">
         
         {/* ЛЕВАЯ ЧАСТЬ: Логотип и Печатная машинка */}

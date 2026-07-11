@@ -5,6 +5,9 @@ import { PsychedelicCursor } from "@/components/PsychedelicCursor";
 import { CursorLoader } from "@/components/CursorLoader"; 
 import Script from 'next/script';
 
+// 1. Импортируем компонент перехода из React
+import { ViewTransition as ViewTransition } from "react";
+
 const unbounded = Unbounded({
   variable: "--font-unbounded",
   subsets: ["latin", "cyrillic"],
@@ -55,7 +58,11 @@ export default async function RootLayout({ children, params }: Props) {
       </head>
       <body className={`${unbounded.variable} ${golosText.variable} antialiased bg-white`}>
         <CursorLoader />
-        {children}
+        
+        {/* 2. Оборачиваем children в ViewTransition */}
+        <ViewTransition>
+          {children}
+        </ViewTransition>
 
         {/* Яндекс.Метрика — не проеби закрывающие скобки */}
         <Script id="yandex-metrika" strategy="afterInteractive">
