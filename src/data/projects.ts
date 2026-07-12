@@ -852,6 +852,143 @@ const projectsRu: Project[] = [
       },
     ],
   },
+  {
+    "id": 6,
+    "slug": "hobba-audit",
+    "title": "Аудит пользовательского опыта для DeFi Hobba.io",
+    "category": ["UX/UI Аудит"],
+    "duration": "5 days",
+    "image": "/photos/hobba.webp",
+    "link": "https://go.gopiton.com/s6d1oi",
+    "sections": [
+      {
+        "type": "hero",
+        "content": {
+          "title": "Аудит пользовательского опыта для DeFi Hobba.io",
+          "tags": ["UX-аудит", "DeFi", "Solana", "Криптовалюта"]
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Продукт",
+          "text": "Hobba.io — протокол децентрализованных финансов в криптовалютной сети Solana, который работает как автоматизированный кредитный менеджер. Можно закладывать криптовалюту и брать под нее займ в USDC.\n\nЦелевая аудитория — кто верит, что его крипта будет расти, но нужно срочно совершить крупную покупку, а упускать прибыль не хочется. Закладываешь свою крипту по курсу, и получаешь часть от нее уже в стабильной криптовалюте, которую можно даже не возвращать обратно.\n\nУТП в том, что чаще ты не только не платишь за займ, но и тебе доплачивают за него, так как проект реинвестирует твои деньги и получает с этого прибыль."
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Роль в проекте",
+          "text": "Работал в роли приглашенного специалиста, для выявления слабых сторон интерфейса и логических ошибок сайта.\n\nДля полной проверки провел качественные интервью с целевой аудиторией, вложил собственные средства на платформу для проверки полного цикла пути пользователя"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Проблема",
+          "text": "Проект выходил из этапа тестирования и не был до конца уверен в ясности концепции, насколько интуитивно понятен интерфейс взаимодействия с продуктом и какое первое впечатление он вызывает"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Ключевой инсайт",
+          "text": "Большую часть времени я проверял сайт на соответствие логике и эвристики доступности. Однако, в процессе тестирования сайта на влиятельном человеке в сообществе Соланы, обнаружил совершенно очевидный в ретроспективе элемент: отсутствие темной темы на сайте. В криптокомьюнити критически важно иметь возможность заглушить яркий интерфейс или чтобы он был таким изначально.\n\nВторой действительно важный инсайт, из-за которого проект отрезал себя от более чем 100 миллионов ежемесячных пользователей из целевой аудитории: при попытке подключить кошелек в браузере Brave интерфейс навязывает вход через собственный Brave Wallet. При этом Hobba поддерживает только Phantom и Solflare. Если пользователь создал эти кошельки по упрощенному пути (без seed-фразы), он не сможет импортировать их в Brave Wallet и завершить подключение.\n\nТакже, по опросам Oobit, внутрибраузерные кошельки используют всего 15% держателей криптовалюты. Потому что такие кошельки создают угрозу безопасности средств."
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Ограничения",
+          "text": "На тестирование заложили всего 5 дней и 1 SOL(~{{SOL_PRICE}}), этого недостаточно, чтобы проверить продукт в реальных условиях. Многие ошибки в интерфейсе возможно выявить лишь на долгой дистанции."
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Как проводил тестирование",
+          "text": "Каждое качественное тестирование, включая собственную профессиональную оценку проекта, проводилось до знакомства с проектом и интерфейсом, чтобы полностью соответствовать реальному посетителю.\n\nВключили запись, открыли сайт. Дальше как есть, со всеми паузами и размышлениями отправили заказчику. Потому что это и есть самый ценный фидбек, если пользователь 30 секунд думает о значении элемента на экране — его нужно менять."
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Отчет",
+          "text": "Уникальная возможность посмотреть на отчет ровно так, как он был отправлен заказчику: со скринкастами и презентацией\n\nСсылка на скринкасты:"
+        }
+      },
+      {
+        type: "button",
+        content: {
+          label: "go.gopiton.com/s6d1oi",
+          url: "https://go.gopiton.com/s6d1oi",
+          primary: true // true для красной заливки, false для белой рамки
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "src": "/photos/content/hobba/first.webp",
+          "loading": "lazy",
+          "alt": "Второй слайд отчета"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "src": "/photos/content/hobba/second.webp",
+          "loading": "lazy",
+          "alt": "Второй слайд отчета"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "src": "/photos/content/hobba/third.webp",
+          "loading": "lazy",
+          "alt": "Третий слайд отчета"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "src": "/photos/content/hobba/fourth.webp",
+          "loading": "lazy",
+          "alt": "Четвертый слайд отчета"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "src": "/photos/content/hobba/fifth.webp",
+          "loading": "lazy",
+          "alt": "Пятый слайд отчета"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "src": "/photos/content/hobba/sixth.webp",
+          "loading": "lazy",
+          "alt": "Шестой слайд отчета"
+        }
+      },
+      {
+        "type": "summary",
+        "content": {
+          "title": "Чему научился",
+          "text": "Поскольку аудит проводился параллельно с другими специалистами, смогли сопоставить подходы к сдаче работы. Главный организационный вывод на будущее: для ускорения разработки отчеты стоит дублировать не только в виде презентации, но и готовыми карточками задач (тикетами). Это исключает этап ручного переноса багов со стороны клиента и ускоряет внедрение правок",
+          "buttons": [
+            {
+              "label": "Обсудить проект",
+              "url": "https://t.me/liverans",
+              "primary": true
+            }
+          ]
+        }
+      }
+    ]
+  }
 ];
 
 // --- ENGLISH DATA ---
@@ -1526,7 +1663,7 @@ const projectsEn: Project[] = [
     "id": 5,
     "slug": "ithub-presentation",
     "title": "Presentation Template for IThub College Back-Office",
-    "category": ["Pitch deck"],
+    "category": ["Pitch Deck"],
     "duration": "7 days",
     "image": "/photos/backoffice.webp",
     "link": "",
@@ -1681,6 +1818,143 @@ const projectsEn: Project[] = [
         "content": {
           "title": "Results",
           "text": "Client feedback:\n\n“No direct feedback from the back-office yet, they took it straight into production. I expect next year we'll work on refining them further and bringing everything to a unified standard. Your work was solid and well executed.”",
+          "buttons": [
+            {
+              "label": "Discuss project",
+              "url": "https://t.me/liverans",
+              "primary": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "hobba-audit",
+    "title": "UX Audit for DeFi Hobba.io",
+    "category": ["UX/UI Audit"],
+    "duration": "5 days",
+    "image": "/photos/hobba.webp",
+    "link": "https://go.gopiton.com/s6d1oi",
+    "sections": [
+      {
+        "type": "hero",
+        "content": {
+          "title": "UX Audit for DeFi Hobba.io",
+          "tags": ["UX Audit", "DeFi", "Crypto"]
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Product",
+          "text": "Hobba.io is a DeFi protocol on Solana acting as an automated loan manager. Users deposit crypto collateral to borrow USDC.\n\nTarget audience: Users expecting crypto price appreciation who need liquidity for large purchases without selling their assets. They deposit collateral to receive stablecoins, with the option to leave the loan unpaid.\n\nUSP: Instead of paying interest, users often earn yield on their loans because the protocol reinvests the collateral."
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Role",
+          "text": "External UX Consultant. Hired to identify interface weaknesses and logical errors.\n\nTo ensure a thorough review, I conducted qualitative interviews with the target audience and deposited my own funds to test the end-to-end user journey."
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Problem",
+          "text": "Transitioning out of the testing phase, the team was unsure if the core concept was clear, how intuitive the UI was, and what initial impression it made on users."
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Key Insights",
+          "text": "Lack of Dark Mode: While evaluating logic and accessibility heuristics, testing the platform with a prominent Solana community member revealed a major oversight: the lack of a dark mode. In the crypto community, dark interfaces are highly preferred.\n\nBrave Browser Integration Issue: The project was excluding over 100 million monthly active users from its target audience due to a wallet connection conflict. In Brave browser, the native Brave Wallet hijacks the connection. Since Hobba only supports Phantom and Solflare, users who created these wallets via social sign-on (without a seed phrase) cannot import them into Brave Wallet, making connection impossible.\n\nBrowser-Native Wallet Adoption: According to Oobit, only 15% of crypto holders use browser-native wallets due to security concerns."
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Constraints",
+          "text": "The test was limited to 5 days and 1 SOL, which is not enough to evaluate the product under long-term real-world conditions. Many interface issues only surface over time."
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Process",
+          "text": "To replicate a first-time user experience, both the qualitative tests and my professional audit were conducted with zero prior familiarity with the product.\n\nWe recorded raw screen sessions. The unedited footage, complete with user hesitation and pauses, was delivered to the client. If a user spends 30 seconds trying to understand an on-screen element, that element needs to be changed."
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "title": "Deliverables",
+          "text": "The report as delivered to the client, including screencasts and the presentation, is available below:\n\nScreencast link:"
+        }
+      },
+      {
+        type: "button",
+        content: {
+          label: "go.gopiton.com/s6d1oi",
+          url: "https://go.gopiton.com/s6d1oi",
+          primary: true // true для красной заливки, false для белой рамки
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "src": "/photos/content/hobba/first_en.webp",
+          "loading": "lazy",
+          "alt": "First slide of the report"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "src": "/photos/content/hobba/second_en.webp",
+          "loading": "lazy",
+          "alt": "Second slide of the report"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "src": "/photos/content/hobba/third_en.webp",
+          "loading": "lazy",
+          "alt": "Third slide of the report"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "src": "/photos/content/hobba/fourth_en.webp",
+          "loading": "lazy",
+          "alt": "Fourth slide of the report"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "src": "/photos/content/hobba/fifth_en.webp",
+          "loading": "lazy",
+          "alt": "Fifth slide of the report"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "src": "/photos/content/hobba/sixth_en.webp",
+          "loading": "lazy",
+          "alt": "Sixth slide of the report"
+        }
+      },
+      {
+        "type": "summary",
+        "content": {
+          "title": "Lessons Learned",
+          "text": "As this audit was conducted alongside other specialists, we compared delivery workflows. The main takeaway: to speed up implementation, findings should be delivered as both a presentation and ready-to-use task tickets. This saves the client from manually translating presentation slides into Jira/GitHub tasks and speeds up development.",
           "buttons": [
             {
               "label": "Discuss project",

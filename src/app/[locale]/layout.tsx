@@ -22,7 +22,7 @@ const golosText = Golos_Text({
 
 export const metadata: Metadata = {
   title: "Piton Design",
-  description: "Дизайн студия Piton Design",
+  description: "Дизайн студия Piton Design, создаём интерфейсы и сайты для IT-компаний и стартапов. UX/UI дизайн, веб-дизайн, дизайн мобильных приложений, дизайн дашбордов и админ-панелей.",
 };
 
 // Эта херня скажет Нексту создать папки /ru и /en при сборке.
