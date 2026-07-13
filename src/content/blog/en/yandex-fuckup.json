@@ -76,11 +76,17 @@
       }
     },
     {
-      "discriminant": "image",
+      "discriminant": "video",
       "value": {
-        "src": "/photos/content/yandex-fuckup/fixed-hero_en.webp",
+        "src": "/videos/slider.webm",
         "loading": "lazy",
-        "alt": "Fixed hero screen: clear meanings, correct branding"
+        "alt": "Fixed first screen: clear messaging, correct branding"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "text": "This material reflects the author's personal experience while completing a test assignment for Yandex. The elements shown (including logos) are used solely to illustrate mistakes and are not intended to reproduce Yandex trademarks. All rights to the logos and brand elements belong to Yandex."
       }
     },
     {

@@ -100,6 +100,15 @@ const projectSchema = {
                 itemLabel: (props) => `Видео: ${props.fields.src.value || 'Без пути'}`,
                 schema: fields.object({
                     src: fields.text({ label: 'Путь к видео (например, /videos/...)' }),
+                    loading: fields.select({
+                        label: 'Тип загрузки',
+                        options: [
+                            { label: 'Lazy (Отложенная)', value: 'lazy' },
+                            { label: 'Eager (Мгновенная)', value: 'eager' },
+                        ],
+                        defaultValue: 'lazy',
+                    }),
+                    alt: fields.text({ label: 'Описание (alt/aria-label)' }),
                 }),
             },
         },

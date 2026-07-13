@@ -124,11 +124,13 @@ export default async function BlogPostPage({ params }: Props) {
                   <div key={index} className="w-full rounded-[1rem] overflow-hidden bg-[#F7F7FA]">
                     <video
                       src={section.content.src}
+                      preload={section.content.loading === 'eager' ? 'auto' : 'none'}
+                      aria-label={section.content.alt}
+                      className="w-full h-auto object-cover"
                       autoPlay
-                      loop
                       muted
+                      loop
                       playsInline
-                      className="w-full h-auto"
                     />
                   </div>
                 );
