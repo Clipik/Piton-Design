@@ -7,12 +7,9 @@ export function generateStaticParams() {
 
 interface PageProps {
   params: Promise<{ params?: string[] }>;
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
 export default async function Page(props: PageProps) {
   await props.params;
-  await props.searchParams;
-
   return <KeystaticApp />;
 }

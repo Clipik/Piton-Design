@@ -79,7 +79,6 @@
       "discriminant": "video",
       "value": {
         "src": "/videos/slider.webm",
-        "loading": "lazy",
         "alt": "Fixed first screen: clear messaging, correct branding"
       }
     },

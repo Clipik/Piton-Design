@@ -77,7 +77,6 @@
       "discriminant": "video",
       "value": {
         "src": "/videos/slider.webm",
-        "loading": "lazy",
         "alt": "Исправленный первый экран: чистые смыслы, правильный брендинг"
       }
     },
