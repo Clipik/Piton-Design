@@ -7,7 +7,6 @@ import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import CtaButton from "@/components/CtaButton";
 import BadgeWithTooltip from "@/components/BadgeWithTooltip";
-import LinkButton from "@/components/LinkButton";
 import ArticleButton from "@/components/LinkButton";
 
 // Типизация параметров (Next.js 15 требует Promise)

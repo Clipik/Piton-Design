@@ -1,6 +1,6 @@
 // src/data/projects.ts
 
-export type SectionType = "hero" | "text" | "image" | "stats" | "summary";
+export type SectionType = "hero" | "text" | "image" | "stats" | "summary" | "button";
 
 export interface ProjectSection {
   type: SectionType;
@@ -918,7 +918,7 @@ const projectsRu: Project[] = [
         }
       },
       {
-        type: "button",
+        "type": "button",
         content: {
           label: "go.gopiton.com/s6d1oi",
           url: "https://go.gopiton.com/s6d1oi",
