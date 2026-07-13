@@ -1,6 +1,4 @@
-// src/app/[locale]/projects/[slug]/page.tsx
-
-import { getProjectBySlug, getProjects } from "@/data/projects";
+import { getProjectBySlug, getProjects } from "@/lib/projects";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -9,7 +7,6 @@ import CtaButton from "@/components/CtaButton";
 import BadgeWithTooltip from "@/components/BadgeWithTooltip";
 import ArticleButton from "@/components/LinkButton";
 
-// Типизация параметров (Next.js 15 требует Promise)
 type Props = {
   params: Promise<{
     slug: string;
@@ -17,17 +14,17 @@ type Props = {
   }>;
 };
 
-// Генерируем статику
+// Генерируем статику с учетом асинхронного вызова
 export async function generateStaticParams() {
   const locales = ['ru', 'en'];
+  const paths = [];
 
-  const paths = locales.flatMap((locale) => {
-    const projects = getProjects(locale);
-    return projects.map((project) => ({
-      locale,
-      slug: project.slug,
-    }));
-  });
+  for (const locale of locales) {
+    const projects = await getProjects(locale);
+    for (const project of projects) {
+      paths.push({ locale, slug: project.slug });
+    }
+  }
 
   return paths;
 }
@@ -38,10 +35,11 @@ const fixOrphans = (text: string) => {
   return text.replace(/(\s|^)([а-яА-ЯёЁa-zA-Z]{1,3})\s/g, '$1$2\u00A0');
 };
 
-// --- САМА СТРАНИЦА ---
 export default async function ProjectPage({ params }: Props) {
   const { slug, locale } = await params;
-  const project = getProjectBySlug(slug, locale);
+
+  // Добавили await для асинхронного получения данных
+  const project = await getProjectBySlug(slug, locale);
 
   if (!project) {
     notFound();

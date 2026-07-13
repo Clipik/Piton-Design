@@ -1,0 +1,162 @@
+{
+  "title": "High-conversion landing page for Cozy Sreda",
+  "slug": "ysreda",
+  "id": 3,
+  "category": [
+    "Website"
+  ],
+  "badge": "",
+  "duration": "6 days",
+  "image": "/photos/ysreda.webp",
+  "link": "http://ysreda.tilda.ws/",
+  "sections": [
+    {
+      "discriminant": "hero",
+      "value": {
+        "title": "High-conversion landing page for Cozy Sreda",
+        "tags": [
+          "B2B",
+          "Conversion",
+          "UX/UI"
+        ]
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Business transition to B2B",
+        "text": "While designers pray to grids and whitespace, we deal with conversion and logic. If an interface doesn't bring money to the business, it's digital trash, no matter how beautiful it looks.\n\nIn the project for Cozy Sreda, the task was to transform a retail seller into a B2B supplier for HoReCa.\n\nThe client, a manufacturer scaling to the B2B market, approached us with a problem: they had neither a website nor a reputation in the professional environment, and all sales went through marketplaces.\n\nOur task was to develop a landing page generating leads."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ysreda/context_en.webp",
+        "loading": "lazy",
+        "alt": "Project context"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Jobs To Be Done",
+        "text": "A B2B customer is not an impulsive buyer. They have strict KPIs, deadlines, and budgets. We decomposed their needs using the JTBD method and found out that the client consists of four main psychotypes with their own barriers."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ysreda/painandfears_en.webp",
+        "loading": "lazy",
+        "alt": "Pain and fears"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Solution Architecture",
+        "text": "We implemented functionality addressing TA pains:\n— PDF presentation for budget protection, allowing the manager on the client side to justify the purchase to their management.\n— Crash test videos as empirical proof of quality work better than a thousand words."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ysreda/optimizationsales_en.webp",
+        "loading": "lazy",
+        "alt": "Sales tools"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "UX Design and Cart Elimination",
+        "text": "In B2B, a standard cart is an atavism. Wholesale clients do not pay for a truckload of sofas with a card on the website. Extra clicks kill conversion. We threw out everything unnecessary."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ysreda/interfacedesign1_en.webp",
+        "loading": "lazy",
+        "alt": "Interface design without cart"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "text": "We implemented the One-Click-Lead concept. Instead of a buy button, we implemented a context application. The manager receives a lead immediately with the specification of the product of interest. This speeds up deal closing by 30% and eliminates the human factor in calculations."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ysreda/interfacedesign2_en.webp",
+        "loading": "lazy",
+        "alt": "Application form"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "text": "The interface is designed answering questions before they are asked:\n— Confirmation of direct manufacturer status (differentiation from resellers)\n— Tools for quick budgeting\n— Legal guarantees and GOST standards in a visible place"
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ysreda/validation_en.webp",
+        "loading": "lazy",
+        "alt": "Trust block and guarantees"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Mobile First Adaptation",
+        "text": "60% of B2B requests come from mobile devices. Decision-makers are often in the field, not in the office. A website that works incorrectly on a smartphone means a lost client.\n\nWe developed a responsive design with a priority on usability: increased touch zones and instant access to contacts via the burger menu."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ysreda/interfacedesign3_en.webp",
+        "loading": "lazy",
+        "alt": "Mobile version"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Technical Optimization",
+        "text": "Google Lighthouse indicators confirm the quality of our architecture. The site loads instantly without losing users even with unstable mobile internet."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ysreda/lighthouse_en.webp",
+        "loading": "lazy",
+        "alt": "Google Lighthouse scores"
+      }
+    },
+    {
+      "discriminant": "summary",
+      "value": {
+        "title": "Summary",
+        "text": "The client received a stable flow of targeted leads, and we demonstrated that a systematic approach and logic in design defeat subjective 'like or dislike'.",
+        "buttons": [
+          {
+            "label": "View Website",
+            "url": "http://ysreda.tilda.ws/",
+            "primary": false
+          },
+          {
+            "label": "Discuss Project",
+            "url": "https://t.me/liverans",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

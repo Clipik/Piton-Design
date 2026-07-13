@@ -1,0 +1,178 @@
+{
+  "title": "Presentation Template for IThub College Back-Office",
+  "slug": "ithub-presentation",
+  "id": 5,
+  "category": [
+    "Pitch Deck"
+  ],
+  "badge": "",
+  "duration": "7 days",
+  "image": "/photos/backoffice.webp",
+  "link": "",
+  "sections": [
+    {
+      "discriminant": "hero",
+      "value": {
+        "title": "Presentation Template for IThub College Back-Office",
+        "tags": [
+          "PowerPoint",
+          "Redesign",
+          "Template",
+          "Presentation"
+        ]
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "About the Product",
+        "text": "IThub College is a private international college of information and creative technologies offering education for grades 9, 10, and 11 based on a business-oriented methodology."
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Role in Development",
+        "text": "Acted as the sole designer under an art director who verified the proposed solutions. The primary goal was to refresh and modernize the outdated, misaligned design that lacked support for animation and interactivity. That was the brief as received. Since the requirements were quite vague, I initiated a call to clarify the details."
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Constraints",
+        "text": "Adhering to the college brand book and working strictly within PowerPoint. I attempted to understand this decision, as it would be more logical for a Russian business to use platforms like Yandex Slides to remain independent of external policies. However, the decision was made by management and was non-negotiable."
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Problem",
+        "text": "The college art director (my direct client) had long tried to initiate a redesign of the core presentations, but upper management ignored the requests. Ultimately, just a week before the Open House event, the redesign was approved—but as an emergency request.\n\nFurthermore, management refused to provide initial data: presentation topics, presentation formats, or department requirements. I had to work in an information vacuum under a tight deadline."
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Why the Old Solution Didn't Work",
+        "text": "The old design was cluttered, making it difficult to digest the information on the slides.\n\nOld master presentation:"
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ithubackoffice/oldpresentation.webp",
+        "loading": "lazy",
+        "alt": "Old master presentation"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "text": "New presentation for the back-office:"
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ithubackoffice/firstpresentation_en.webp",
+        "loading": "lazy",
+        "alt": "New presentation for the back-office"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Success Criteria",
+        "text": "Without data from stakeholders, I took the opposite approach. Instead of designing for specific content, I built the grid around worst-case high-density scenarios.\n\nEach tile and block was designed to handle excessive amounts of infographics and text. If future slides remained simple, the layout would look clean. If users overloaded them with data, the layout would hold up and remain readable."
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Vague Requirements at the Start",
+        "text": "At the start, I tried to gather as much data as possible: the back-office departments, the most common presentation topics (to prepare the required slide layouts), and how the presentations would be used (delivered in person on a large screen or shown during video conferences).\n\nWithout this information, I had to improvise. I prioritized handling high-density complex infographics and text while maintaining readability."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ithubackoffice/secondpresentation_en.webp",
+        "loading": "lazy",
+        "alt": "Process and service status monitoring"
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ithubackoffice/thirdpresentation_en.webp",
+        "loading": "lazy",
+        "alt": "Integration with external systems"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Key Insight",
+        "text": "I realized the client's priority was speed, consistency, and visual polish. Consequently, during the first and only round of revisions, I integrated the college's official mascot, adapting it to the presentation context."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ithubackoffice/fourthpresentation_en.webp",
+        "loading": "lazy",
+        "alt": "Official college mascot in the presentation"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Challenges",
+        "text": "As I design mostly in Figma, I pay close attention to frame responsiveness. It was a challenge to step away from Auto Layout and find an alternative way to keep content aligned to the grid, even as the volume of information changed."
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Alternative Layout Concepts",
+        "text": "In the first version, I placed standard text over objects to create depth and layers. I later discarded this approach for a more stable and robust solution: embedding text directly inside shape boxes instead of grouping them. To keep a heading and body text constrained together, I used invisible embedded Excel tables."
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "How the Presentation Solves the Client's Problem",
+        "text": "The design was delivered a day before the deadline, complete with rationale to help the client present it to management. When end-users edit the slides, they won't struggle with broken text wraps or easily disrupt the visual system."
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Critical User Interaction Scenarios",
+        "text": "It was essential to build a template that looks polished and remains stable in practice. Users shouldn't have to worry about reducing or refitting content.\n\nI also considered potential connection issues during presentations. In the future style guide to be compiled by another team, I recommended using WebP and AVIF instead of PNG and JPG. This will reduce overall presentation file size by up to 30% and speed up slide load times by 50%. Conversion takes almost no time, but ensures reliable loading over unstable networks."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ithubackoffice/fifthpresentation_en.webp",
+        "loading": "lazy",
+        "alt": "Slide featuring a college life photo gallery"
+      }
+    },
+    {
+      "discriminant": "summary",
+      "value": {
+        "title": "Results",
+        "text": "Client feedback:\n\n“No direct feedback from the back-office yet, they took it straight into production. I expect next year we'll work on refining them further and bringing everything to a unified standard. Your work was solid and well executed.”",
+        "buttons": [
+          {
+            "label": "Discuss project",
+            "url": "https://t.me/liverans",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

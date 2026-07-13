@@ -1,0 +1,117 @@
+{
+  "title": "SmartFeed Content Aggregator MVP",
+  "slug": "smartfeed",
+  "id": 2,
+  "category": [
+    "App",
+    "Pitch Deck"
+  ],
+  "badge": "",
+  "duration": "1 month",
+  "image": "/photos/content/smartfeed/main.webp",
+  "link": "#",
+  "sections": [
+    {
+      "discriminant": "hero",
+      "value": {
+        "title": "SmartFeed Content Aggregator MVP",
+        "tags": [
+          "App",
+          "Aggregator",
+          "AI",
+          "UX/UI",
+          "Pitch Deck"
+        ]
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Information Hygiene",
+        "text": "While hipsters are redrawing icons and looking for gradients, we are solving the engineering problem of how to get information out from under blocks and information noise. The application should simplify life in digital isolation.\n\nThe client approached us with a project for the Russian market, where, under the conditions of Meta blocking, users faced the problem of information noise.\n\nTo stay informed, they have to inefficiently monitor VK, Telegram, Zen, and Youtube, which leads to FOMO and endless feed scrolling.\n\nOur task was to develop an MVP that would collect content in one place, filter it using AI, and ensure anonymity."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/smartfeed/PhotoWithMainAppBenefits_en.webp",
+        "loading": "lazy",
+        "alt": "Key app benefits"
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/smartfeed/Competitors_en.webp",
+        "loading": "lazy",
+        "alt": "Competitors analysis"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Solution Architecture",
+        "text": "Users don't give a shit about ecosystems; they need content. The system parses everything: from open sources to those under restrictions. Neural network (SF.AI) analyzes interests by behavior.\nResult: a relevant feed without trash."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/smartfeed/FeedProfileAndSearch_en.webp",
+        "loading": "lazy",
+        "alt": "Feed and Search"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Onboarding and Anonymity",
+        "text": "Ordinary applications require email, phone, and stool samples at the entrance. This kills conversion. We made entry without registration. Entered, tapped on interests, got value.\n\nLogin is only needed to save likes. This lowers the entry barrier to zero. We give dopamine immediately and demand data later.\n\nWe implemented a system of impersonal profiles. Only a data hash. You watch content, the system knows what you like, but doesn't know who you are."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/smartfeed/OnboardingAndAnonymousUsing_en.webp",
+        "loading": "lazy",
+        "alt": "Onboarding and anonymous use"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Fighting Overload",
+        "text": "Competitors' interfaces (especially VK) are a visual dump. The user does not understand where one post ends and an ad for hemorrhoid remedies begins.\n\nTherefore, we added a soft shadow and increased padding to each post card. Not for beauty, but because tests showed that in VK users get lost in the stream. Clear separation allows the brain to process information faster.\n\nLess load = longer session = more money for business."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/smartfeed/PostsSeparate_en.webp",
+        "loading": "lazy",
+        "alt": "Posts separation"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Mobile Logic",
+        "text": "We took Instagram patterns to lower the entry threshold. A familiar interface reduces cognitive resistance.\n\nReactions are available to everyone as engagement. Comments are available only by subscription (barrier against spam and bots + monetization). This cuts off trolls and creates elitism for those ready to pay for the right to express an opinion."
+      }
+    },
+    {
+      "discriminant": "summary",
+      "value": {
+        "title": "Summary",
+        "text": "Development was paused because investors temporarily suspended funding due to new political risks. We designed a system that solves the problem of a deficit of Western content and an excess of domestic content. Pure functionality wrapped in a clear UI.",
+        "buttons": [
+          {
+            "label": "Discuss Project",
+            "url": "https://t.me/liverans",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

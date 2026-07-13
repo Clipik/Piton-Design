@@ -10,7 +10,7 @@ export type BlogPost = {
   sections: any[];
 }
 
-const postsRu: BlogPost[] = [
+export const postsRu: BlogPost[] = [
   {
     id: 1,
     slug: "yandex-fuckup",
@@ -107,7 +107,7 @@ const postsRu: BlogPost[] = [
   },
 ];
 
-const postsEn: BlogPost[] = [
+export const postsEn: BlogPost[] = [
   {
     id: 1,
     slug: "yandex-fuckup",

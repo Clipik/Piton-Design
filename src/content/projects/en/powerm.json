@@ -1,0 +1,291 @@
+{
+  "title": "Power Machines Career Portal",
+  "slug": "powerm",
+  "id": 4,
+  "category": [
+    "Website",
+    "HR Tech",
+    "UX/UI"
+  ],
+  "badge": "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 141.7 141.7\" xml:space=\"preserve\"><style>.st0{fill:#FF0033;}.st1{fill:#FFFFFF;}</style><polygon class=\"st0\" points=\"70.9,0 78.4,13.8 89.2,2.4 92.9,17.7 106.3,9.5 105.9,25.2 121,20.8 116.5,35.8 132.2,35.4 124.1,48.8 139.3,52.5 128,63.4 141.7,70.9 128,78.4 139.3,89.2 124.1,92.9 132.2,106.3 116.5,105.9 121,121 105.9,116.5 106.3,132.2 92.9,124.1 89.2,139.3 78.4,128 70.9,141.7 63.4,128 52.5,139.3 48.8,124.1 35.4,132.2 35.8,116.5 20.8,121 25.2,105.9 9.5,106.3 17.7,92.9 2.4,89.2 13.8,78.4 0,70.9 13.8,63.4 2.4,52.5 17.7,48.8 9.5,35.4 25.2,35.8 20.8,20.8 35.8,25.2 35.4,9.5 48.8,17.7 52.5,2.4 63.4,13.8\"/><g><path class=\"st1\" d=\"M85,100H56.7v-5.9h10.5v-39H56.7v-5.3c4,0,6.9-0.6,8.8-1.7c1.9-1.1,2.9-3.3,3.2-6.4h6.1v52.4H85V100z\"/></g></svg>",
+  "duration": "10 days",
+  "image": "/photos/content/powerm/coverphoto.webp",
+  "link": "https://career.power-m.ru",
+  "sections": [
+    {
+      "discriminant": "hero",
+      "value": {
+        "title": "Power Machines Career Portal",
+        "tags": [
+          "UX/UI",
+          "HR Tech",
+          "Conversion",
+          "Mobile First"
+        ]
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Personnel is everything. Broken UX means no personnel.",
+        "text": "Power Machines is Russia's largest energy equipment manufacturer. 70% of the Russian and CIS market, 13,000+ employees, 5th place globally by equipment volume, clients in 57 countries. Yet the career site was stuck in 2019 and wasn't converting young talent into applicants.\n\nThe problem wasn't the brand — it was the tool. The site didn't function as a hiring funnel: 70% of traffic came from mobile, but the mobile version was unusable. Filters were buried, the path to an application took 7 clicks, and job listings were written in HR-speak, not plain language.\n\nThe task: redesign the portal so it hires 2,000 people a year on its own — no managers holding candidates by the hand. Constraints: a strict brand book, a legacy 1C-Bitrix engine, and no changes to the color palette."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/context_en.webp",
+        "loading": "lazy",
+        "alt": "Project context: situation, problem, task"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Benchmarking: what competitors get right",
+        "text": "Before designing anything, I analyzed the three strongest HR portals in heavy industry: NLMK, Severstal, and SIBUR. Each had something worth borrowing.\n\nNLMK has a powerful filter right in the header with direction-based navigation — a candidate reaches relevant vacancies in one click. Plus a Telegram channel for HR communication, because young people don't make phone calls.\n\nSeverstal's design is built around people. The 'We inspire each other' section with real employee photos breaks down a newcomer's skepticism — they see future colleagues, not corporate gloss. Visual clarity with no cluttered screens.\n\nSIBUR shows career trajectories and fast-track growth programs directly on the site. The 'Who works at SIBUR' section with employee career stories builds trust where previously there were only lists of requirements.\n\nConclusion: a good-looking site is not enough. You need a working system — filtering, structured vacancies, social proof, and a path from landing to application in the fewest steps possible."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/benchmarkingNLMK_en.webp",
+        "loading": "lazy",
+        "alt": "NLMK benchmarking: navigation and filtering"
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/benchmarkingSEVERSTAL_en.webp",
+        "loading": "lazy",
+        "alt": "Severstal benchmarking: values communication and visual clarity"
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/benchmarkingSIBUR_en.webp",
+        "loading": "lazy",
+        "alt": "SIBUR benchmarking: career trajectories and social proof"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Strategy: sell the future, not the machines",
+        "text": "To attract young talent, you show people and perspective — not equipment. A 25-year-old welder isn't choosing between factories; they're choosing between lifestyles. The strategy rests on three principles.\n\nA service approach to navigation. Filtering and vacancy structure, because the site must work as a tool — not a brochure.\n\nSelling the future. We shift from listing job duties to success stories, career tracks, and social proof. The candidate should picture themselves in three years, not read an instruction manual for a role.\n\nMobile priority. 70% of traffic comes from phones. A welder searches for jobs on the subway using an old Android — not sitting with a MacBook in a coworking space."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/strategy_en.webp",
+        "loading": "lazy",
+        "alt": "Strategy: service-first navigation and selling the future"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Four pillars of UX",
+        "text": "Quick access. Filters by direction, city, and training availability are placed on the main screen — right below the headline. The candidate's path from landing on the site to a list of relevant vacancies is cut down to 2 clicks.\n\nStructured presentation. Information is packed into blocks with icons and lists so users can scan content at a glance without reading every word. In seconds, a candidate understands what's on offer and how one role differs from another.\n\nVisual clarity. A strict grid, generous whitespace, and high-contrast typography. The interface isn't overloaded with graphics — it looks modern and precise, and stays easy to implement in Bitrix.\n\nReality. Photos of actual employees and real production floors. This builds trust because the candidate sees genuine working conditions and future colleagues — not AI-generated smiles from stock libraries."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/newportalux_en.webp",
+        "loading": "lazy",
+        "alt": "New portal UX: quick access, structure, clarity, reality"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "An interface for the basic smartphone",
+        "text": "The mobile version was designed as a standalone product, not a scaled-down desktop. The user is a blue-collar worker with an inexpensive phone who has no time to navigate complex menus.\n\nLarge touch zones from 44px prevent accidental taps. High-contrast fonts are readable outdoors in bright sunlight. Hover effects are removed entirely — they don't exist on touchscreens and only break the experience.\n\nFilters are on the first screen. A candidate finds a relevant vacancy immediately, without wandering through menus. Like a ride-hailing app: open, pick, apply.\n\nJob cards strip out corporate jargon and abstract language. Concrete facts replace it: what you actually do, what equipment you work with, whether training is included."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/mobileapatationHOW_en.webp",
+        "loading": "lazy",
+        "alt": "Mobile adaptation principles"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Cutting the path to a vacancy on the homepage",
+        "text": "The search bar and filters are positioned in the hero block — no scrolling required. A candidate opens the site and the very first thing they see is the ability to instantly filter vacancies by direction, city, and training availability.\n\nBelow the filters sits a live block of real open vacancies. Not an abstract 'View all vacancies' button, but specific roles the company is actively hiring for right now. This creates the impression of Power Machines as a dynamic, active employer — not an empty template."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/heroblockofmainpage_en.webp",
+        "loading": "lazy",
+        "alt": "New hero section of the portal — desktop and mobile"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "The numbers block",
+        "text": "Numbers work better than ad copy because they require no interpretation. The block builds confidence: this isn't some small factory that might close next year. This is a backbone enterprise with real scale."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/companyinnumbersblockofmainpage_en.webp",
+        "loading": "lazy",
+        "alt": "Company key metrics block"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Pride in the profession",
+        "text": "Power Machines makes one-of-a-kind things: Russia's first low-speed steam turbine for a nuclear power plant, proprietary gas turbines, hydrogenerators for the country's largest hydroelectric stations.\n\nIf a candidate doesn't know what 'manufacturing' actually means here — show them. Demonstrating real products builds professional pride before day one on the job and removes skepticism before it starts.\n\nNo stock photos. Only real workshops, real machines, and real employees."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/visualproofblockofmainpage_en.webp",
+        "loading": "lazy",
+        "alt": "Visual proof block: unique company products"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Catching the hot candidate",
+        "text": "A standard funnel loses the candidate somewhere between the 'About' page and the vacancies list — they explored a direction, got interested, but don't know where to click next.\n\nThe fix: every thematic block on the homepage duplicates the vacancies from its own direction right below the description. No need to go back to the homepage, find the 'Vacancies' section, and filter from scratch.\n\nContextual vacancy display is estimated to increase application conversion by 30%, because it eliminates the gap between interest and action."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/vacanciesblockofmainpage_en.webp",
+        "loading": "lazy",
+        "alt": "Contextual vacancy display by direction on the homepage"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "A female audience — without the fines",
+        "text": "Most industrial job portals specify gender in listings — 'position for men' or use exclusively male pronouns. This is a direct violation of Russian labor law and carries real financial risk.\n\nAt the same time, those companies are cutting off a female audience that in many specializations represents a significant share of qualified talent.\n\nThe fix: navigation blocks for each job direction use photos of both women and men in equal proportion. No gender indicators anywhere in the interface. The visual is neutral by default. The company reaches a broader audience and is legally protected at the same time."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/inclusiveandstudentsblockofmainpage_en.webp",
+        "loading": "lazy",
+        "alt": "Inclusive navigation design and student onboarding block"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Vacancies page",
+        "text": "The filter is always visible alongside the vacancy list. A candidate never needs to scroll back to the top to change parameters — they adjust on the fly without losing their place. The list format lets users scan vacancies twice as fast as a card layout, because information is organized in a clean horizontal flow."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/vacanciespage_en.webp",
+        "loading": "lazy",
+        "alt": "Vacancies page: persistent filter and list view"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Entry into the profession for those who don't know the terminology",
+        "text": "'Electrical machine winder' or 'NDT defectoscopist' — a newcomer with no industrial background has no idea what these roles are or what the work actually looks like day to day.\n\nInstead of a text list of job titles, we introduced visual cards with a real photo of the workplace and a plain-language description of the work. You're laying windings into stator slots — here's what it looks like, here's what you do with your hands, here's what the result depends on.\n\nThe 'With training' tag addresses the biggest fear of someone without experience: 'they won't hire me.' The company answers directly: we will, and we'll teach you."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/vacanciesifnoexp_en.webp",
+        "loading": "lazy",
+        "alt": "Entry-level vacancy cards with photos and plain descriptions"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Seamless application: removed the unnecessary steps",
+        "text": "The standard application flow on industrial portals looks like this: found a vacancy → clicked 'Apply' → redirected to a blank form → manually typed the job title → filled in five fields → submitted. Candidates drop off at every step.\n\nWe removed the friction. When a candidate clicks 'Apply' directly on the vacancy page, the application form auto-populates the job title. The candidate only enters their name and email.\n\nLess friction = fewer drop-offs at the final stage of the funnel."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/vacanciesifnoexpblockform_en.webp",
+        "loading": "lazy",
+        "alt": "Seamless application form: fields auto-populated from the vacancy"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Geography: company scale as an argument",
+        "text": "Power Machines operates in Russia, Belarus, Uzbekistan, Serbia, Turkey, India, Vietnam, and Colombia. That's a compelling argument for a candidate thinking about a career, not just a job close to home.\n\nWe redesigned the map interface: a toggle instantly separates offices and manufacturing plants. A candidate sees either a sales map (where managers work) or a factories map (where things are built). This eliminates confusion and lets an applicant find their city immediately.\n\nThe geography block also serves the 'About Us' section — it communicates international scale without a single word of marketing copy."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/geographyblockaboutuspage_en.webp",
+        "loading": "lazy",
+        "alt": "Interactive map of company presence"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Content editors won't break the layout",
+        "text": "Bitrix is a hard constraint. Content managers will add articles through a standard editor, and the design must hold up at any content length without breaking.\n\nThe universal article page template works at any depth: a short news post, a long-form feature, a technical document. Visual hierarchy structures the text with accent blocks — headings, pull quotes, lists — without requiring a designer's intervention.\n\nEvery article has a built-in 'Apply for a vacancy' CTA block. A company news piece, a factory floor report, an interview with an engineer — each becomes an entry point into the hiring funnel."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/articlepagetop_en.webp",
+        "loading": "lazy",
+        "alt": "Article page top: header and modular grid"
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/powerm/articlepagebottom_en.webp",
+        "loading": "lazy",
+        "alt": "Article page bottom: CTA block and mobile view"
+      }
+    },
+    {
+      "discriminant": "summary",
+      "value": {
+        "title": "Summary",
+        "text": "1st place at the federal 'Young Design' competition. The concept was approved by top management. The client received a high-conversion interface that respects candidates' time and solves a concrete business problem: uninterrupted hiring across their factories.\n\nEvery decision in this project is backed by data and funnel logic.",
+        "buttons": [
+          {
+            "label": "Discuss Project",
+            "url": "https://t.me/liverans",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

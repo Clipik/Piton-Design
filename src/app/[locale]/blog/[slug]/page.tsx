@@ -1,4 +1,4 @@
-import { getBlogPostBySlug, getBlogPosts } from "@/data/blog";
+import { getBlogPostBySlug, getBlogPosts } from "@/lib/blog"; // Импортируем из нового /lib/
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -13,12 +13,19 @@ type Props = {
   }>;
 };
 
+// Генерируем статику с учетом асинхронного вызова
 export async function generateStaticParams() {
   const locales = ['ru', 'en'];
-  return locales.flatMap((locale) => {
-    const posts = getBlogPosts(locale);
-    return posts.map((post) => ({ locale, slug: post.slug }));
-  });
+  const paths = [];
+
+  for (const locale of locales) {
+    const posts = await getBlogPosts(locale);
+    for (const post of posts) {
+      paths.push({ locale, slug: post.slug });
+    }
+  }
+
+  return paths;
 }
 
 const fixOrphans = (text: string) => {
@@ -28,7 +35,9 @@ const fixOrphans = (text: string) => {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug, locale } = await params;
-  const post = getBlogPostBySlug(slug, locale);
+
+  // Добавили await для асинхронного получения данных
+  const post = await getBlogPostBySlug(slug, locale);
 
   if (!post) notFound();
 

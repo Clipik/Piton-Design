@@ -21,7 +21,7 @@ export interface Project {
 }
 
 // --- RUSSIAN DATA ---
-const projectsRu: Project[] = [
+export const projectsRu: Project[] = [
   {
     id: 4,
     slug: "powerm",
@@ -992,7 +992,7 @@ const projectsRu: Project[] = [
 ];
 
 // --- ENGLISH DATA ---
-const projectsEn: Project[] = [
+export const projectsEn: Project[] = [
   {
     id: 4,
     slug: "powerm",

@@ -1,0 +1,119 @@
+{
+  "title": "IThub College Homepage",
+  "slug": "ithub",
+  "id": 1,
+  "category": [
+    "Website"
+  ],
+  "badge": "",
+  "duration": "3 days",
+  "image": "/photos/content/ithub/main.webp",
+  "link": "https://ithub.ru",
+  "sections": [
+    {
+      "discriminant": "hero",
+      "value": {
+        "title": "IThub College Homepage",
+        "tags": [
+          "EdTech",
+          "Web Design",
+          "Dark Mode"
+        ]
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Interface that sells",
+        "text": "While public universities are designing digital wall newspapers from the 2000s, we build interfaces that sell. If a college website looks worse than a generic 'success course' landing page, you lose the applicant in 3 seconds.\n\nThe task was to turn an educational institution into a place where people want to bring their money.\n\nThe client approached us with a commercial college that had ambitions but lacked clear positioning and had an ancient landing page.\n\nThe project was based on a conflict of audiences: the site must be loved by teenagers (the target audience), but the money is paid by parents (decision-makers). The current visuals were infantile, and the content was bureaucratic.\n\nOur task was to develop a visual concept that would sell the college like an IT startup."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ithub/NewHeroLooksLike_en.webp",
+        "loading": "lazy",
+        "alt": "New Hero Design"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Jobs To Be Done",
+        "text": "We are dealing with two opposite psychotypes on one screen. Trying to please everyone means making a grey mass. We separated the flows visually and semantically.\n\nThe teenager doesn't care about state standards. They want vibes, a community, and to feel like the hero of Mr. Robot.\nSolution: dark mode, neon palette, 3D mascots, and cyberpunk aesthetics.\n\nThe parent doesn't care about neon because they want guarantees, diplomas, and investment security."
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Visual Architecture",
+        "text": "We moved away from low-quality real photos that cheapened the brand.\n\nInstead, we implemented AI generation and 3D assets of the college mascot. Instead of stock photos of a happy teenager with a juice box, we added real photos of the college.\n\nThis set a quality bar that the client is now obliged to meet in their content."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ithub/Professions_en.webp",
+        "loading": "lazy",
+        "alt": "Visual style of professions"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Engineering and Handling Objections",
+        "text": "The main pain of paid education is the tuition cost. Seeing a price tag of 60,000 ₽/month and leaving is a standard parent scenario. We intercepted this scenario.\n\nInstead of an Excel price list, we made tariff cards with color coding. We implemented an 'Educational Loan' block immediately after the price.\n\nWe don't apologize for it being paid; we provide a solution. We turn an unbearable expense into a smart investment in the future."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ithub/BenefitsPricesAndCredit_en.webp",
+        "loading": "lazy",
+        "alt": "Price and credit block"
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ithub/FeedbackForm_en.webp",
+        "loading": "lazy",
+        "alt": "Application form"
+      }
+    },
+    {
+      "discriminant": "text",
+      "value": {
+        "title": "Navigation Cleanup",
+        "text": "We killed bureaucracy and instead of a mess of links, we made a two-level short menu with a dropdown list.\n\nSearch was collapsed into an icon, freeing up 20% of useful screen area for content."
+      }
+    },
+    {
+      "discriminant": "image",
+      "value": {
+        "src": "/photos/content/ithub/NewHeaderLooksLike_en.webp",
+        "loading": "lazy",
+        "alt": "New website header"
+      }
+    },
+    {
+      "discriminant": "summary",
+      "value": {
+        "title": "Summary",
+        "text": "The client received a top-studio level concept for a freelance budget. The college website looks like the Netflix interface, not a government portal. The design was accepted without 'taste discussions' because every decision was justified by money and user psychology.",
+        "buttons": [
+          {
+            "label": "View Website",
+            "url": "https://ithub.ru",
+            "primary": false
+          },
+          {
+            "label": "Discuss Project",
+            "url": "https://t.me/liverans",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}
