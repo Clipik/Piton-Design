@@ -6,10 +6,10 @@ import ProjectGrid from "@/components/ProjectGrid";
 import Pricing from "@/components/Pricing";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
-import { getProjects } from "@/data/projects";
+import { getProjects } from "@/lib/projects";
 import { getContent } from "@/data/content";
 import Blog from "@/components/Blog";
-import { getBlogPosts } from "@/data/blog";
+import { getBlogPosts } from "@/lib/blog";
 
 interface HomeProps {
   params: Promise<{
@@ -20,8 +20,8 @@ interface HomeProps {
 export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
 
-  const projects = getProjects(locale);
-  const blogPosts = getBlogPosts(locale);
+  const projects = await getProjects(locale);
+  const blogPosts = await getBlogPosts(locale);
   const dict = getContent(locale);
 
   return (

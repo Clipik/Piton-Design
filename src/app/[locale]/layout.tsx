@@ -4,9 +4,12 @@ import "@/app/globals.css";
 import { PsychedelicCursor } from "@/components/PsychedelicCursor"; 
 import { CursorLoader } from "@/components/CursorLoader"; 
 import Script from 'next/script';
+import { notFound } from "next/navigation";
 
-// 1. Импортируем компонент перехода из React
+
 import { ViewTransition as ViewTransition } from "react";
+
+const locales = ['ru', 'en'];
 
 const unbounded = Unbounded({
   variable: "--font-unbounded",
@@ -40,6 +43,11 @@ type Props = {
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
+
+  if (!locales.includes(locale)) {
+    notFound();
+  }
+
   const METRIKA_ID = 106115411;
 
   return (

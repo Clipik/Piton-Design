@@ -75,7 +75,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/original.webp",
+        "src": "/photos/content/web3career/original.webp",
         "loading": "lazy",
         "alt": "Оригинальный фильтр категорий и тегов web3.career"
       }
@@ -83,7 +83,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/redesign.webp",
+        "src": "/photos/content/web3career/redesing.webp",
         "loading": "lazy",
         "alt": "Редизайн фильтров и категорий у web3.career"
       }
@@ -91,7 +91,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/redesign1.webp",
+        "src": "/photos/content/web3career/redesing1.webp",
         "loading": "lazy",
         "alt": "Редизайн фильтров и категорий у web3.career"
       }
@@ -111,7 +111,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/origvacancies.webp",
+        "src": "/photos/content/web3career/origvacancies.webp",
         "loading": "lazy",
         "alt": "Вакансии на сайте web3.career"
       }
@@ -119,7 +119,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/vacancies.webp",
+        "src": "/photos/content/web3career/vacancies.webp",
         "loading": "lazy",
         "alt": "Редизайн вакансий на сайте web3.career"
       }
@@ -127,7 +127,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/metana.webp",
+        "src": "/photos/content/web3career/metana.webp",
         "loading": "lazy",
         "alt": "Баннер Metana рекламный для web3.career"
       }
@@ -153,7 +153,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/redesing12.webp",
+        "src": "/photos/content/web3career/redesing12.webp",
         "loading": "lazy",
         "alt": "Новые фильтры для web3.career"
       }
@@ -168,7 +168,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/Customer_Journey_Map_Ideal.webp",
+        "src": "/photos/content/web3career/Customer_Journey_Map_Ideal.webp",
         "loading": "lazy",
         "alt": "Путь пользователя web3.career после редизайна"
       }

@@ -75,7 +75,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/original.webp",
+        "src": "/photos/content/web3career/original.webp",
         "loading": "lazy",
         "alt": "Original category and tag filter of web3.career"
       }
@@ -83,7 +83,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/redesign.webp",
+        "src": "/photos/content/web3career/redesing.webp",
         "loading": "lazy",
         "alt": "Redesign of filters and categories for web3.career"
       }
@@ -91,7 +91,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/redesign1.webp",
+        "src": "/photos/content/web3career/redesing1.webp",
         "loading": "lazy",
         "alt": "Redesign of filters and categories for web3.career"
       }
@@ -111,7 +111,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/origvacancies.webp",
+        "src": "/photos/content/web3career/origvacancies.webp",
         "loading": "lazy",
         "alt": "Jobs on the web3.career website"
       }
@@ -119,7 +119,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/vacancies.webp",
+        "src": "/photos/content/web3career/vacancies.webp",
         "loading": "lazy",
         "alt": "Redesign of jobs on the web3.career website"
       }
@@ -127,7 +127,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/metana.webp",
+        "src": "/photos/content/web3career/metana.webp",
         "loading": "lazy",
         "alt": "Metana promotional banner for web3.career"
       }
@@ -153,7 +153,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/redesing12.webp",
+        "src": "/photos/content/web3career/redesing12.webp",
         "loading": "lazy",
         "alt": "New filters for web3.career"
       }
@@ -168,7 +168,7 @@
     {
       "discriminant": "image",
       "value": {
-        "src": "/photos/web3career/Customer_Journey_Map_Ideal_en.webp",
+        "src": "/photos/content/web3career/Customer_Journey_Map_Ideal_en.webp",
         "loading": "lazy",
         "alt": "User journey of web3.career after the redesign"
       }
