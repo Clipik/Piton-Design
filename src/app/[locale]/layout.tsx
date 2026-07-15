@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { Unbounded, Golos_Text } from "next/font/google";
 import "@/app/globals.css";
-import { PsychedelicCursor } from "@/components/PsychedelicCursor"; 
-import { CursorLoader } from "@/components/CursorLoader"; 
-import Script from 'next/script';
-import { notFound } from "next/navigation";
-
+import { PsychedelicCursor } from "@/components/PsychedelicCursor";
+import { CursorLoader } from "@/components/CursorLoader";
+import Script from "next/script";
+import { NotFound404 } from "@/components/NotFound404";
 
 import { ViewTransition as ViewTransition } from "react";
 
-const locales = ['ru', 'en'];
+const locales = ["ru", "en"];
 
 const unbounded = Unbounded({
   variable: "--font-unbounded",
@@ -25,15 +24,12 @@ const golosText = Golos_Text({
 
 export const metadata: Metadata = {
   title: "Piton Design",
-  description: "Дизайн студия Piton Design, создаём интерфейсы и сайты для IT-компаний и стартапов. UX/UI дизайн, веб-дизайн, дизайн мобильных приложений, дизайн дашбордов и админ-панелей.",
+  description:
+    "Дизайн студия Piton Design, создаём интерфейсы и сайты для IT-компаний и стартапов. UX/UI дизайн, веб-дизайн, дизайн мобильных приложений, дизайн дашбордов и админ-панелей.",
 };
 
-// Эта херня скажет Нексту создать папки /ru и /en при сборке.
 export function generateStaticParams() {
-  return [
-    { locale: 'ru' },
-    { locale: 'en' },
-  ];
+  return [{ locale: "ru" }, { locale: "en" }];
 }
 
 type Props = {
@@ -43,33 +39,30 @@ type Props = {
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
-
-  if (!locales.includes(locale)) {
-    notFound();
-  }
+  const isValidLocale = locales.includes(locale);
 
   const METRIKA_ID = 106115411;
 
   return (
-    <html lang={locale}>
+    <html lang={isValidLocale ? locale : "ru"}>
       {/* 
         ДОБАВЛЯЕМ HEAD ВРУЧНУЮ ДЛЯ PRELOAD 
         Это скажет браузеру: "Бросай всё и качай эту картинку, она нужна для LCP прямо щас".
       */}
       <head>
-        <link 
-          rel="preload" 
-          as="image" 
-          href="/photos/coinshero-placeholder.webp" 
+        <link
+          rel="preload"
+          as="image"
+          href="/photos/coinshero-placeholder.webp"
           fetchPriority="high"
         />
       </head>
       <body className={`${unbounded.variable} ${golosText.variable} antialiased bg-white`}>
         <CursorLoader />
-        
+
         {/* 2. Оборачиваем children в ViewTransition */}
         <ViewTransition>
-          {children}
+          {isValidLocale ? children : <NotFound404 />}
         </ViewTransition>
 
         {/* Яндекс.Метрика — не проеби закрывающие скобки */}
@@ -93,10 +86,10 @@ export default async function RootLayout({ children, params }: Props) {
         </Script>
         <noscript>
           <div>
-            <img 
-              src={`https://mc.yandex.ru/watch/${METRIKA_ID}`} 
-              style={{ position: 'absolute', left: '-9999px' }} 
-              alt="" 
+            <img
+              src={`https://mc.yandex.ru/watch/${METRIKA_ID}`}
+              style={{ position: "absolute", left: "-9999px" }}
+              alt=""
             />
           </div>
         </noscript>
