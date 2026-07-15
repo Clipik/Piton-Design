@@ -4,11 +4,15 @@ import "@/app/globals.css";
 import { PsychedelicCursor } from "@/components/PsychedelicCursor";
 import { CursorLoader } from "@/components/CursorLoader";
 import Script from "next/script";
-import { NotFound404 } from "@/components/NotFound404";
 
 import { ViewTransition as ViewTransition } from "react";
 
-const locales = ["ru", "en"];
+// Это НАСТОЯЩИЙ корневой layout для всей публичной части сайта
+// (группа роутов (site) — папка в скобках, на URL не влияет).
+// html/body/CSS/шрифты рендерятся здесь ровно один раз, единообразно
+// для ЛЮБОГО пути внутри (site) — включая not-found/fallback-кейсы.
+// Именно поэтому Next.js больше не подставляет свой внутренний
+// DefaultLayout и не плодит вложенные <html>.
 
 const unbounded = Unbounded({
   variable: "--font-unbounded",
@@ -28,27 +32,11 @@ export const metadata: Metadata = {
     "Дизайн студия Piton Design, создаём интерфейсы и сайты для IT-компаний и стартапов. UX/UI дизайн, веб-дизайн, дизайн мобильных приложений, дизайн дашбордов и админ-панелей.",
 };
 
-export function generateStaticParams() {
-  return [{ locale: "ru" }, { locale: "en" }];
-}
+const METRIKA_ID = 106115411;
 
-type Props = {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-};
-
-export default async function RootLayout({ children, params }: Props) {
-  const { locale } = await params;
-  const isValidLocale = locales.includes(locale);
-
-  const METRIKA_ID = 106115411;
-
+export default function SiteRootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={isValidLocale ? locale : "ru"}>
-      {/* 
-        ДОБАВЛЯЕМ HEAD ВРУЧНУЮ ДЛЯ PRELOAD 
-        Это скажет браузеру: "Бросай всё и качай эту картинку, она нужна для LCP прямо щас".
-      */}
+    <html lang="ru">
       <head>
         <link
           rel="preload"
@@ -60,12 +48,8 @@ export default async function RootLayout({ children, params }: Props) {
       <body className={`${unbounded.variable} ${golosText.variable} antialiased bg-white`}>
         <CursorLoader />
 
-        {/* 2. Оборачиваем children в ViewTransition */}
-        <ViewTransition>
-          {isValidLocale ? children : <NotFound404 />}
-        </ViewTransition>
+        <ViewTransition>{children}</ViewTransition>
 
-        {/* Яндекс.Метрика — не проеби закрывающие скобки */}
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`
             (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
