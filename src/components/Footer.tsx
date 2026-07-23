@@ -23,15 +23,15 @@ export default function Footer({ locale, content }: FooterProps) {
   };
 
   // Фразы для печатной машинки зависят от локали
-  const typewriterPhrases = locale === 'ru' 
-    ? ["Сайт за 3 дня", "MVP для стартапа", "Piton Design"]
-    : ["Website in 3 days", "MVP for startup", "Piton Design"];
+  const typewriterPhrases = locale === 'ru'
+    ? ["Сайт для B2B", "MVP для стартапа", "Piton Design"]
+    : ["Website for B2B", "MVP for startup", "Piton Design"];
 
   return (
     <footer className="w-full bg-white border-t border-[#F0F0F0] pt-16 pb-8">
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-          
+
           {/* ЛЕВАЯ ЧАСТЬ: Логотип и Печатная машинка */}
           <div className="flex items-center gap-1 flex-shrink-0">
             <div className="relative flex-shrink-0">
@@ -71,12 +71,12 @@ export default function Footer({ locale, content }: FooterProps) {
             className="flex items-center gap-3 bg-[#F7F7FA] hover:bg-[#F0F0F5] px-6 py-3 rounded-full transition-colors group"
           >
             <div className="w-9 h-9 border-2 border-[#FF0033] rounded-full flex items-center justify-center text-[#FF0033]">
-              <svg 
-                width="20" height="20" viewBox="0 0 24 24" fill="none" 
+              <svg
+                width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
                 className="group-hover:-translate-y-1 transition-transform"
               >
-                <path d="M12 19V5M5 12l7-7 7 7"/>
+                <path d="M12 19V5M5 12l7-7 7 7" />
               </svg>
             </div>
             <span className="text-[#FF0033] font-['Golos_Text'] font-medium text-[1.1rem]">
@@ -84,9 +84,40 @@ export default function Footer({ locale, content }: FooterProps) {
             </span>
           </button>
 
+          {/* Блок социальных сетей */}
+          <div className="flex items-center gap-3">
+            <a
+              href="https://t.me/liverans"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[56px] h-[56px] rounded-full bg-[#F7F7FA] hover:bg-[#F0F0F5] flex items-center justify-center transition-colors"
+              aria-label="Telegram"
+            >
+              <div className="w-6 h-6 bg-[#FF0033] [mask-image:url(/telegram_logo.svg)] [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center]" />
+            </a>
+            <a
+              href="https://linkedin.com/in/nikita-mishchenko"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[56px] h-[56px] rounded-full bg-[#F7F7FA] hover:bg-[#F0F0F5] flex items-center justify-center transition-colors"
+              aria-label="LinkedIn"
+            >
+              <div className="w-5 h-5 bg-[#FF0033] [mask-image:url(/linkedin_logo.svg)] [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center]" />
+            </a>
+            <a
+              href="https://x.com/pitondesign"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[56px] h-[56px] rounded-full bg-[#F7F7FA] hover:bg-[#F0F0F5] flex items-center justify-center transition-colors"
+              aria-label="X (Twitter)"
+            >
+              <div className="w-5 h-5 bg-[#FF0033] [mask-image:url(/x_logo.svg)] [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center]" />
+            </a>
+          </div>
+
           {/* Кнопка "Обсудить" */}
-          <CtaButton 
-            locale={locale} 
+          <CtaButton
+            locale={locale}
             className="h-[56px] pl-6 pr-2 text-[1.25rem]"
           />
         </div>
@@ -97,15 +128,15 @@ export default function Footer({ locale, content }: FooterProps) {
           </p>
           <div className="flex gap-6 text-[0.8rem] font-['Golos_Text'] text-[#222222] opacity-40">
             {/* Ссылки должны включать локаль */}
-            <Link 
-              href={`/${locale}/privacy`} 
+            <Link
+              href={`/${locale}/privacy`}
               className="hover:opacity-100 transition-opacity"
             >
               {content.privacy}
             </Link>
-            
-            <Link 
-              href={`/${locale}/terms`} 
+
+            <Link
+              href={`/${locale}/terms`}
               className="hover:opacity-100 transition-opacity"
             >
               {content.terms}

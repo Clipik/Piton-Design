@@ -4,6 +4,7 @@ import { Project } from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
 import CtaButton from "./CtaButton";
+import BadgeWithTooltip from "./BadgeWithTooltip";
 
 interface ProjectGridProps {
   locale: string;
@@ -11,9 +12,9 @@ interface ProjectGridProps {
 }
 
 export default function ProjectGrid({ locale, projects }: ProjectGridProps) {
-  
+
   // 1. ОПРЕДЕЛЯЕМ КАТЕГОРИИ В ЗАВИСИМОСТИ ОТ ЯЗЫКА
-  const categoriesList = locale === 'ru' 
+  const categoriesList = locale === 'ru'
     ? ["Все", "Сайт", "Приложение", "Питч-дек"]
     : ["All", "Website", "App", "Pitch Deck"];
 
@@ -28,18 +29,17 @@ export default function ProjectGrid({ locale, projects }: ProjectGridProps) {
 
   return (
     <div className="w-full max-w-[1200px] mx-auto px-4 py-2">
-      
+
       {/* ФИЛЬТРЫ */}
       <div className="flex flex-wrap justify-center gap-6 md:gap-16 mb-16">
         {categoriesList.map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`text-[1rem] md:text-[1rem] font-['Golos_Text'] font-regular transition-all duration-300 cursor-pointer relative py-2 ${
-              activeCategory === cat 
-                ? "text-[#FF0033] font-medium" 
+            className={`text-[1rem] md:text-[1rem] font-['Golos_Text'] font-regular transition-all duration-300 cursor-pointer relative py-2 ${activeCategory === cat
+                ? "text-[#FF0033] font-medium"
                 : "text-[#222222] hover:text-[#FF0033]"
-            }`}
+              }`}
           >
             {cat}
           </button>
@@ -56,11 +56,11 @@ export default function ProjectGrid({ locale, projects }: ProjectGridProps) {
           >
             {/* ВЕРХНЯЯ ЧАСТЬ: Изображение */}
             <div className="relative aspect-[16/11] w-full overflow-hidden bg-white">
-              
+
               <div className="absolute top-6 left-6 flex flex-wrap gap-2 z-10">
                 {project.category.map((cat) => (
-                  <div 
-                    key={cat} 
+                  <div
+                    key={cat}
                     className="bg-white px-4 py-1.5 rounded-full shadow-2xl flex items-center justify-center"
                     style={{ borderRadius: '2450px' }}
                   >
@@ -70,26 +70,10 @@ export default function ProjectGrid({ locale, projects }: ProjectGridProps) {
                   </div>
                 ))}
                 {'badge' in project && project.badge && (
-                  <div 
-                    className="relative"
-                    onClick={(e) => {
-                      e.preventDefault(); // чтобы не открывал страницу проекта
-                      setActiveBadge(activeBadge === project.id ? null : project.id);
-                    }}
-                  >
-                    <div 
-                      className="w-8 h-8 shadow-2xl cursor-pointer"
-                      dangerouslySetInnerHTML={{ __html: project.badge }} 
-                    />
-                    {/* Тултип — на десктопе по hover, на мобилке по клику */}
-                    <div className={`absolute right-0 top-full mt-2 z-50 max-w-[200px] whitespace-normal md:whitespace-nowrap md:max-w-none bg-[#222222] text-white text-[0.75rem] font-['Golos_Text'] px-3 py-1.5 rounded-lg transition-all duration-200 pointer-events-none
-                      ${activeBadge === project.id ? 'opacity-100 visible' : 'opacity-0 invisible'}
-                      group-hover/badge:opacity-100 group-hover/badge:visible`}
-                    >
-                      {locale === 'ru' ? '🏆 1 место в федеральном дизайн-соревновании' : '🏆 1st place in a national design competition'}
-                      <div className="absolute bottom-full right-3 border-4 border-transparent border-b-[#222222]" />
-                    </div>
-                  </div>
+                  <BadgeWithTooltip
+                    badge={project.badge}
+                    label={locale === 'ru' ? '🏆 1 место в федеральном дизайн-соревновании' : '🏆 1st place in a national design competition'}
+                  />
                 )}
               </div>
 
@@ -128,8 +112,8 @@ export default function ProjectGrid({ locale, projects }: ProjectGridProps) {
       </div>
 
       {/* FOOTER BUTTON */}
-      <CtaButton 
-        locale={locale} 
+      <CtaButton
+        locale={locale}
         className="w-full h-[64px] mt-6 text-[1.25rem] px-4"
       />
     </div>

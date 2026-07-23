@@ -18,7 +18,6 @@ export default function Navbar({ locale }: NavbarProps) {
 
   useEffect(() => {
     const controlNavbar = () => {
-      // Если мобильное меню открыто, не трогаем навбар, пусть висит. Логично?
       if (isOpen) {
         setIsVisible(true);
         return;
@@ -74,7 +73,7 @@ export default function Navbar({ locale }: NavbarProps) {
           </Link>
           <div className="hidden sm:block">
             <Typewriter
-                phrases={locale === 'ru' ? ["Сайт за 3 дня", "MVP для стартапа", "Piton Design"] : ["Website in 3 days", "MVP for startup", "Piton Design"]}
+                phrases={locale === 'ru' ? ["Сайт для B2B", "MVP для стартапа", "Piton Design"] : ["Website for B2B", "MVP for startup", "Piton Design"]}
                 speed={100}
                 deleteSpeed={50}
                 pauseTime={2000}
@@ -92,13 +91,14 @@ export default function Navbar({ locale }: NavbarProps) {
               {locale === 'ru' ? 'Услуги и цены' : 'Services & Pricing'}
             </Link>
             <Link href={`/${locale}/#about`} className="px-4 py-2 text-[1rem] font-regular text-[#222222] hover:text-[#FF0033] hover:bg-[#FF0033]/5 rounded-full transition-all duration-300">
-               {locale === 'ru' ? 'О студии' : 'About us'}
+               {locale === 'ru' ? 'Что вы получаете' : 'Your Benefits'}
             </Link>
           </div>
         </div>
 
         {/* ПРАВО: Десктоп Язык + CTA, Мобильный гамбургер */}
         <div className="flex items-center gap-4 lg:gap-6 flex-shrink-0">
+
           
           {/* Language Switcher (Desktop) */}
           <div className="relative group hidden lg:block">
@@ -174,7 +174,7 @@ export default function Navbar({ locale }: NavbarProps) {
                 {locale === 'ru' ? 'Услуги и цены' : 'Services & Pricing'}
               </Link>
               <Link onClick={() => setIsOpen(false)} href={`/${locale}/#about`} className="px-4 py-3 text-[1.1rem] font-medium text-[#222222] hover:text-[#FF0033] transition-colors">
-                 {locale === 'ru' ? 'О студии' : 'About us'}
+                 {locale === 'ru' ? 'Что вы получаете' : 'About us'}
               </Link>
            </div>
 

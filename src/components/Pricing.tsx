@@ -9,7 +9,7 @@ interface PricingProps {
     from: string; // "от " или "from "
     services: Array<{
       id: number;
-      topTags: string[];
+      // topTags: string[];
       lottieSrc: string;
       title: string;
       tags: string[];
@@ -60,7 +60,7 @@ export default function Pricing({ locale, content }: PricingProps) {
           >
             
             {/* Тэги сверху */}
-            <div className="flex flex-wrap gap-2 mb-3">
+            {/* <div className="flex flex-wrap gap-2 mb-3">
               {item.topTags.map((tag) => (
                 <div 
                   key={tag} 
@@ -72,7 +72,7 @@ export default function Pricing({ locale, content }: PricingProps) {
                   </span>
                 </div>
               ))}
-            </div>
+            </div> */}
 
             {/* Lottie анимация */}
             <div className="bg-white rounded-[16px] w-full aspect-[16/10] flex items-center justify-center overflow-hidden mb-6">
